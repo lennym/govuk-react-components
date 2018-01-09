@@ -1,0 +1,24 @@
+{
+  "name": "govuk-react-components",
+  "version": "0.0.1",
+  "description": "React components for govuk layouts and elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lennym/govuk-react-components.git"
+  },
+  "author": "Leonard Martin <hello@lennym.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lennym/govuk-react-components/issues"
+  },
+  "homepage": "https://github.com/lennym/govuk-react-components#readme",
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "react": "^16.2.0"
+  }
+}
