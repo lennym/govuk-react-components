@@ -45,6 +45,7 @@ RadioGroup.propTypes = {
   options: Types.options.isRequired,
   id: PropTypes.string,
   type: PropTypes.string,
+  inline: PropTypes.bool,
   value: PropTypes.oneOfType([Types.value, PropTypes.arrayOf(Types.value)]),
   hint: PropTypes.string,
   error: PropTypes.string
