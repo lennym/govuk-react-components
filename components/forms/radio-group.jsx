@@ -1,22 +1,12 @@
 const React = require('react');
+
 const Input = require('./input');
+const MultipleChoice = require('./mixins/multiple-choice');
 
-class RadioGroup extends Input {
-
-  optionId(opt) {
-    return `${this.id()}-${opt.value.toString().toLowerCase().replace(/[^a-z0-9\-]/g, '')}`;
-  }
+class RadioGroup extends MultipleChoice(Input) {
 
   render() {
-    const options = this.props.options.map(opt => {
-      if (typeof opt === 'string') {
-        return {
-          label: opt,
-          value: opt
-        };
-      }
-      return opt;
-    });
+    const options = this.normaliseOptions();
     return <div className={this.errorClass('form-group')}>
       <fieldset className={this.props.inline ? 'inline' : ''}>
         <legend className="form-label-bold">{this.props.label}</legend>
@@ -30,7 +20,7 @@ class RadioGroup extends Input {
                 type={this.props.type}
                 name={this.props.name}
                 value={opt.value}
-                checked={this.props.value === opt.value}
+                checked={this.hasValue(opt.value)}
                 />
               <label htmlFor={this.optionId(opt)}>{opt.label}</label>
             </div>
