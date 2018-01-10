@@ -26,7 +26,7 @@
     "babel-preset-react": "^6.24.1"
   },
   "files": [
-    "./components",
+    "components/*",
     "index.js"
   ]
 }
