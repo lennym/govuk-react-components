@@ -31,7 +31,6 @@ class Layout extends React.Component {
         </head>
 
         <body>
-          <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
           <div id="skiplink-container">
             <div>
@@ -98,7 +97,11 @@ class Layout extends React.Component {
           <div id="global-app-error" className="app-error hidden"></div>
 
           <script src={`${this.props.assetPath}/javascripts/govuk-template.js?0.23.0`}></script>
-
+          {
+            this.props.scripts.map(file => (
+              <script src={file} key={file}></script>
+            ))
+          }
           <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
         </body>
       </html>
@@ -110,6 +113,7 @@ class Layout extends React.Component {
 Layout.defaultProps = {
   assetPath: '/govuk',
   stylesheets: [],
+  scripts: [],
   homepageUrl: 'https://www.gov.uk',
   propositionHeaderLink: '/',
   logoLinkTitle: '',
@@ -127,6 +131,7 @@ Layout.propTypes = {
 
   assetPath: PropTypes.string,
   stylesheets: PropTypes.arrayOf(PropTypes.string),
+  scripts: PropTypes.arrayOf(PropTypes.string),
   homepageUrl: PropTypes.string,
   logoLinkTitle: PropTypes.string,
   globalHeaderText: PropTypes.string,
