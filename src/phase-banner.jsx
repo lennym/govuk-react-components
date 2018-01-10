@@ -1,4 +1,5 @@
 const React = require('react');
+const PropTypes = require('prop-types');
 
 class PhaseBanner extends React.Component {
 
@@ -18,5 +19,9 @@ class PhaseBanner extends React.Component {
   }
 
 }
+
+PhaseBanner.propTypes = {
+  phase: PropTypes.oneOf(['prototype', 'alpha', 'beta'])
+};
 
 module.exports = PhaseBanner;

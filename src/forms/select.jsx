@@ -1,7 +1,9 @@
 const React = require('react');
+const PropTypes = require('prop-types');
+const Types = require('../types');
 
 const Input = require('./input');
-const MultipleChoice = require('./mixins/multiple-choice');
+const MultipleChoice = require('../mixins/multiple-choice');
 
 class Select extends MultipleChoice(Input) {
 
@@ -39,6 +41,17 @@ class Select extends MultipleChoice(Input) {
 Select.defaultProps = {
   options: [],
   nullOption: 'Select...'
+};
+
+Select.propTypes = {
+  name: PropTypes.string.isRequired,
+  options: Types.options.isRequired,
+  id: PropTypes.string,
+  type: PropTypes.string,
+  value: Types.value,
+  hint: PropTypes.string,
+  error: PropTypes.string,
+  nullOption: PropTypes.string
 };
 
 module.exports = Select;

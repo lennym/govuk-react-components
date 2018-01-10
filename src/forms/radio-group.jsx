@@ -1,7 +1,9 @@
 const React = require('react');
+const PropTypes = require('prop-types');
+const Types = require('../types');
 
 const Input = require('./input');
-const MultipleChoice = require('./mixins/multiple-choice');
+const MultipleChoice = require('../mixins/multiple-choice');
 
 class RadioGroup extends MultipleChoice(Input) {
 
@@ -13,14 +15,14 @@ class RadioGroup extends MultipleChoice(Input) {
         { this.props.hint && <span className="form-hint">{this.props.hint}</span> }
         { this.props.error && <span className="error-message">{this.props.error}</span> }
         {
-          this.props.options.map(opt => (
-            <div className="multiple-choice">
+          options.map(opt => (
+            <div className="multiple-choice" key={this.optionId(opt)}>
               <input
                 id={this.optionId(opt)}
                 type={this.props.type}
                 name={this.props.name}
                 value={opt.value}
-                checked={this.hasValue(opt.value)}
+                defaultChecked={this.hasValue(opt.value)}
                 />
               <label htmlFor={this.optionId(opt)}>{opt.label}</label>
             </div>
@@ -36,6 +38,16 @@ RadioGroup.defaultProps = {
   options: [],
   type: 'radio',
   inline: false
+};
+
+RadioGroup.propTypes = {
+  name: PropTypes.string.isRequired,
+  options: Types.options.isRequired,
+  id: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.oneOfType([Types.value, PropTypes.arrayOf(Types.value)]),
+  hint: PropTypes.string,
+  error: PropTypes.string
 };
 
 module.exports = RadioGroup;

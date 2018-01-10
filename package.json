@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lennym/govuk-react-components#readme",
   "dependencies": {
+    "prop-types": "^15.6.0",
     "react": "^16.2.0"
   },
   "devDependencies": {

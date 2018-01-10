@@ -1,4 +1,5 @@
 const React = require('react');
+const PropTypes = require('prop-types');
 
 class Layout extends React.Component {
 
@@ -88,7 +89,7 @@ class Layout extends React.Component {
                 </div>
 
                 <div className="copyright">
-                  <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">{ this.props.crownCopyrightMessage }</a>
+                  <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
                 </div>
               </div>
             </div>
@@ -115,8 +116,29 @@ Layout.defaultProps = {
   skipToContent: 'Skip to main content',
   skipToContentTarget: '#content',
   footerLinks: [],
-  globalHeaderText: 'GOV.UK',
-  crownCopyrightMessage: '© Crown copyright'
+  globalHeaderText: 'GOV.UK'
 };
+
+Layout.propTypes = {
+  children: PropTypes.node,
+
+  propositionHeader: PropTypes.string,
+  title: PropTypes.string,
+
+  assetPath: PropTypes.string,
+  stylesheets: PropTypes.arrayOf(PropTypes.string),
+  homepageUrl: PropTypes.string,
+  logoLinkTitle: PropTypes.string,
+  globalHeaderText: PropTypes.string,
+  propositionHeaderLink: PropTypes.string,
+  skipToContent: PropTypes.string,
+  skipToContentTarget: PropTypes.string,
+  footerLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: PropTypes.string,
+      label: PropTypes.string
+    })
+  )
+}
 
 module.exports = Layout;

@@ -1,5 +1,6 @@
 const React = require('react');
 const Input = require('./input');
+const PropTypes = require('prop-types');
 
 class TextInput extends Input {
 
@@ -15,7 +16,7 @@ class TextInput extends Input {
         id={this.id()}
         name={this.props.name}
         type={this.props.type}
-        value={this.props.value}
+        defaultValue={this.props.value}
         />
     </div>;
   }
@@ -24,6 +25,15 @@ class TextInput extends Input {
 
 TextInput.defaultProps = {
   type: 'text'
+};
+
+TextInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.string,
+  hint: PropTypes.string,
+  error: PropTypes.string
 };
 
 module.exports = TextInput;
