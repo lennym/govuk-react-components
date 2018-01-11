@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 class Input extends React.Component {
 
@@ -12,4 +12,4 @@ class Input extends React.Component {
 
 }
 
-module.exports = Input;
+export default Input;

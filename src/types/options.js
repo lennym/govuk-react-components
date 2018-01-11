@@ -1,8 +1,7 @@
-const PropTypes = require('prop-types');
+import PropTypes from 'prop-types';
+import value from './value';
 
-const value = require('./value');
-
-module.exports = PropTypes.arrayOf(
+export default PropTypes.arrayOf(
   PropTypes.oneOfType([
     PropTypes.shape({
       value,

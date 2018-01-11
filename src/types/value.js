@@ -1,6 +1,6 @@
-const PropTypes = require('prop-types');
+import PropTypes from 'prop-types';
 
-module.exports = PropTypes.oneOfType([
+export default PropTypes.oneOfType([
   PropTypes.number,
   PropTypes.string
 ]);

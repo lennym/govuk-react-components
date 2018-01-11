@@ -1,9 +1,9 @@
-const React = require('react');
-const PropTypes = require('prop-types');
-const Types = require('../types');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Types from '../types';
 
-const Input = require('./input');
-const MultipleChoice = require('../mixins/multiple-choice');
+import Input from './input';
+import MultipleChoice from '../mixins/multiple-choice';
 
 class RadioGroup extends MultipleChoice(Input) {
 
@@ -51,4 +51,4 @@ RadioGroup.propTypes = {
   error: PropTypes.string
 };
 
-module.exports = RadioGroup;
+export default RadioGroup;
