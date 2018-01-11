@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const assets = require('govuk-react-components').assets;
+const assets = require('../').assets;
 
 const app = express();
 

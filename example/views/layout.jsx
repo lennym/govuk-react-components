@@ -1,6 +1,6 @@
 const React = require('react');
-const GovUK = require('govuk-react-components/components/layout');
-const PhaseBanner = require('govuk-react-components/components/phase-banner');
+const GovUK = require('../../components/layout');
+const PhaseBanner = require('../../components/phase-banner');
 
 class Layout extends React.Component {
   render() {

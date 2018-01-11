@@ -1,10 +1,10 @@
 const React = require('react');
 const Layout = require('./layout');
 
-const Input = require('govuk-react-components/components/forms/input-text');
-const RadioGroup = require('govuk-react-components/components/forms/radio-group');
-const Select = require('govuk-react-components/components/forms/select');
-const Date = require('govuk-react-components/components/forms/date');
+const Input = require('../../components/forms/input-text');
+const RadioGroup = require('../../components/forms/radio-group');
+const Select = require('../../components/forms/select');
+const Date = require('../../components/forms/date');
 
 class Index extends React.Component {
   render() {
