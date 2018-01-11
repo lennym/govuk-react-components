@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:js && npm run build:css",
-    "build:js": "babel ./src --out-dir ./components --presets react",
+    "build:js": "babel ./src --out-dir ./components ",
     "prebuild:css": "mkdir -p ./assets",
     "build:css": "npm-sass ./src/styles/elements.scss > ./assets/elements.css",
     "prepublish": "npm run build"
@@ -29,6 +29,8 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.0",
     "babel-preset-react": "^6.24.1",
     "govuk-elements-sass": "^3.1.2",
     "npm-sass": "^2.2.1"
