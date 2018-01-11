@@ -1,0 +1,18 @@
+{
+  "name": "govuk-react-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-react-views": "^0.10.4",
+    "govuk-react-components": "0.0.8",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

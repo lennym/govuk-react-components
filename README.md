@@ -13,3 +13,13 @@ To include the necessary stylesheets and assets in your app you can - if you are
 ```js
 app.use(require('govuk-react-components').assets());
 ```
+
+## Examples
+
+There is a basic example app in `./example`. To run it:
+
+```
+$ cd example
+$ npm start
+$ open http://localhost:8080
+```
