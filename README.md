@@ -8,6 +8,8 @@ This is *very* Work In Progress code at the moment so you almost certainly don't
 
 Contributions are welcome.
 
+## Loading assets
+
 To include the necessary stylesheets and assets in your app you can - if you are using express - mount the included middleware to serve these files:
 
 ```js
