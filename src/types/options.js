@@ -8,5 +8,5 @@ export default PropTypes.arrayOf(
       label: PropTypes.string
     }),
     value
-  ]),
+  ])
 );
