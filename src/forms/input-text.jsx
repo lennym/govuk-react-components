@@ -1,6 +1,6 @@
-const React = require('react');
-const Input = require('./input');
-const PropTypes = require('prop-types');
+import React from 'react';
+import Input from './input';
+import PropTypes from 'prop-types';
 
 class TextInput extends Input {
 
@@ -36,4 +36,4 @@ TextInput.propTypes = {
   error: PropTypes.string
 };
 
-module.exports = TextInput;
+export default TextInput;

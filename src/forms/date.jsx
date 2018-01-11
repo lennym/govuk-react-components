@@ -1,7 +1,7 @@
-const React = require('react');
-const Input = require('./input');
-const PropTypes = require('prop-types');
-const Types = require('../types');
+import React from 'react';
+import Input from './input';
+import PropTypes from 'prop-types';
+import Types from '../types';
 
 class DateInput extends Input {
 
@@ -59,4 +59,4 @@ DateInput.propTypes = {
   error: PropTypes.string
 };
 
-module.exports = DateInput;
+export default DateInput;

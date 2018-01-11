@@ -1,5 +1,5 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Layout extends React.Component {
 
@@ -146,4 +146,4 @@ Layout.propTypes = {
   )
 }
 
-module.exports = Layout;
+export default Layout;

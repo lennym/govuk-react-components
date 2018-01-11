@@ -1,10 +1,9 @@
-const React = require('react');
-const PropTypes = require('prop-types');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class PhaseBanner extends React.Component {
 
   render() {
-
     if (!this.props.phase) {
       return;
     }
@@ -24,4 +23,4 @@ PhaseBanner.propTypes = {
   phase: PropTypes.oneOf(['prototype', 'alpha', 'beta'])
 };
 
-module.exports = PhaseBanner;
+export default PhaseBanner;
