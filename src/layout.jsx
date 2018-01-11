@@ -112,7 +112,7 @@ class Layout extends React.Component {
 
 Layout.defaultProps = {
   assetPath: '/govuk',
-  stylesheets: [],
+  stylesheets: ['/govuk/elements.css'],
   scripts: [],
   homepageUrl: 'https://www.gov.uk',
   propositionHeaderLink: '/',
