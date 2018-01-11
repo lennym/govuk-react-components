@@ -44,7 +44,7 @@ RadioGroup.propTypes = {
   name: PropTypes.string.isRequired,
   options: Types.options.isRequired,
   id: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['radio', 'checkbox']),
   inline: PropTypes.bool,
   value: PropTypes.oneOfType([Types.value, PropTypes.arrayOf(Types.value)]),
   hint: PropTypes.string,
