@@ -1,7 +1,7 @@
 module.exports = superclass => class MultipleChoice extends superclass {
 
   optionId(opt) {
-    return `${this.id()}-${opt.value.toString().toLowerCase().replace(/[^a-z0-9\-]/g, '')}`;
+    return `${this.id()}-${opt.value.toString().toLowerCase().replace(/[^a-z0-9-]/g, '')}`;
   }
 
   hasValue(val) {
