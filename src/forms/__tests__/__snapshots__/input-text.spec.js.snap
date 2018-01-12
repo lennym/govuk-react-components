@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Date Component should render a hint when a hint is passed in 1`] = `
+exports[`The Input Text Component should render a hint when a hint is passed in 1`] = `
 <div
   class="form-group"
 >
@@ -29,7 +29,7 @@ exports[`The Date Component should render a hint when a hint is passed in 1`] = 
 </div>
 `;
 
-exports[`The Date Component should render an error when an error is passed in 1`] = `
+exports[`The Input Text Component should render an error when an error is passed in 1`] = `
 <div
   class="form-group form-group-error"
 >
@@ -58,7 +58,7 @@ exports[`The Date Component should render an error when an error is passed in 1`
 </div>
 `;
 
-exports[`The Date Component should render correctly when a value is passed in 1`] = `
+exports[`The Input Text Component should render correctly when a value is passed in 1`] = `
 <div
   class="form-group"
 >

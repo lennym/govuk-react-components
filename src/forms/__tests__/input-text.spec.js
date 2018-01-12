@@ -1,8 +1,8 @@
 import React from 'react'
 import { mount, render } from 'enzyme'
-import InputText from '../input-text';
+import InputText from 'govuk-react-components/forms/input-text';
 
-describe('The Date Component', () => {
+describe('The Input Text Component', () => {
 
   it('should render correctly when a value is passed in', () => {
     expect(
