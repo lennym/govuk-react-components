@@ -19,16 +19,15 @@ class Select extends MultipleChoice(Input) {
         className={this.errorClass('form-control')}
         id={this.id()}
         name={this.props.name}
+        val={this.props.value}
         >
         {
           this.props.nullOption && <option value="">{this.props.nullOption}</option> }
-        }
         {
-          this.props.options.map(opt => (
+          options.map(opt => (
             <option
               value={opt.value}
               key={opt.value}
-              selected={this.hasValue(opt.value)}
               >{opt.label}</option>
           ))
         }
@@ -46,6 +45,7 @@ Select.defaultProps = {
 Select.propTypes = {
   name: PropTypes.string.isRequired,
   options: Types.options.isRequired,
+  onChange: PropTypes.func,
   id: PropTypes.string,
   type: PropTypes.string,
   value: Types.value,

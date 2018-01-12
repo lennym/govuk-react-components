@@ -4,6 +4,18 @@ import PropTypes from 'prop-types';
 
 class TextInput extends Input {
 
+  checkedOrUnchecked() {
+    if(this.props.onChange) {
+      return {
+        value: this.props.value,
+        onChange: this.props.onChange
+      };
+    }
+    return {
+      defaultValue: this.props.value
+    }
+  }
+
   render() {
     return <div className={this.errorClass('form-group')}>
       <label className="form-label" htmlFor={this.id()}>
@@ -16,7 +28,7 @@ class TextInput extends Input {
         id={this.id()}
         name={this.props.name}
         type={this.props.type}
-        defaultValue={this.props.value}
+        {...this.checkedOrUnchecked()}
         />
     </div>;
   }
@@ -30,6 +42,7 @@ TextInput.defaultProps = {
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
   id: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.string,

@@ -7,6 +7,24 @@ import MultipleChoice from '../mixins/multiple-choice';
 
 class RadioGroup extends MultipleChoice(Input) {
 
+  static defaultProps = {
+    options: [],
+    type: 'radio',
+    inline: false
+  };
+
+  optProps(opt) {
+    if (this.props.onChange) {
+      return {
+        onChange: this.props.onChange,
+        checked: this.hasValue(opt.value)
+      }
+    }
+    return {
+     defaultChecked: this.hasValue(opt.value)
+    }
+  }
+
   render() {
     const options = this.normaliseOptions();
     return <div className={this.errorClass('form-group')}>
@@ -22,7 +40,7 @@ class RadioGroup extends MultipleChoice(Input) {
                 type={this.props.type}
                 name={this.props.name}
                 value={opt.value}
-                defaultChecked={this.hasValue(opt.value)}
+                {...this.optProps(opt)}
                 />
               <label htmlFor={this.optionId(opt)}>{opt.label}</label>
             </div>
@@ -34,15 +52,11 @@ class RadioGroup extends MultipleChoice(Input) {
 
 }
 
-RadioGroup.defaultProps = {
-  options: [],
-  type: 'radio',
-  inline: false
-};
-
 RadioGroup.propTypes = {
   name: PropTypes.string.isRequired,
   options: Types.options.isRequired,
+  label:PropTypes.string.isRequired,
+  onChange: PropTypes.func,
   id: PropTypes.string,
   type: PropTypes.oneOf(['radio', 'checkbox']),
   inline: PropTypes.bool,

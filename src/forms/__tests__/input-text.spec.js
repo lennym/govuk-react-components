@@ -22,4 +22,9 @@ describe('The Input Text Component', () => {
     ).toMatchSnapshot();
   });
 
+  it('should render as a checked input correctly', () => {
+    expect(
+      render(<InputText label="ip" name="ip" value="someText" onChange={() => { }} />)
+    ).toMatchSnapshot();
+  });
 })
