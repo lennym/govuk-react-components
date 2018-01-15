@@ -16,6 +16,21 @@
         "code",
         "review"
       ]
+    },
+    {
+      "login": "lennym",
+      "name": "Leonard Martin",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/117398?v=4",
+      "profile": "https://github.com/lennym",
+      "contributions": [
+        "question",
+        "code",
+        "doc",
+        "example",
+        "ideas",
+        "review",
+        "test"
+      ]
     }
   ]
 }
