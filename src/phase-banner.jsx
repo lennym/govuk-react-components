@@ -4,17 +4,14 @@ import PropTypes from 'prop-types';
 class PhaseBanner extends React.Component {
 
   renderContent() {
-    if (this.props.content) {
-      return this.props.content
+    if (this.props.children) {
+      return this.props.children;
     } else if (this.props.feedbackUrl) {
       return <span>This is a new service – your <a href={this.props.feedbackUrl}>feedback</a> will help us to improve it.</span>
     }
   }
 
   render() {
-    if (!this.props.phase) {
-      return;
-    }
 
     return <div className="phase-banner">
       <p>
@@ -36,8 +33,7 @@ PhaseBanner.defaultProps = {
 
 PhaseBanner.propTypes = {
   phase: PropTypes.oneOf(['prototype', 'alpha', 'beta']),
-  feedbackUrl: PropTypes.string,
-  content: PropTypes.node
+  feedbackUrl: PropTypes.string
 };
 
 export default PhaseBanner;
