@@ -19,7 +19,7 @@ class Select extends MultipleChoice(Input) {
         className={this.errorClass('form-control')}
         id={this.id()}
         name={this.props.name}
-        val={this.props.value}
+        {...this.checkedOrUnchecked()}
         >
         {
           this.props.nullOption && <option value="">{this.props.nullOption}</option> }

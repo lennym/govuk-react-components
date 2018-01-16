@@ -4,18 +4,6 @@ import PropTypes from 'prop-types';
 
 class TextInput extends Input {
 
-  checkedOrUnchecked() {
-    if(this.props.onChange) {
-      return {
-        value: this.props.value,
-        onChange: this.props.onChange
-      };
-    }
-    return {
-      defaultValue: this.props.value
-    }
-  }
-
   render() {
     return <div className={this.errorClass('form-group')}>
       <label className="form-label" htmlFor={this.id()}>

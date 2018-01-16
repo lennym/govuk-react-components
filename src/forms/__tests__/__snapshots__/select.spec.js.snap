@@ -122,7 +122,6 @@ exports[`The Select Component should render correctly with multiple options and 
     class="form-control"
     id="test"
     name="test"
-    val="opt2"
   >
     <option
       value=""
@@ -135,6 +134,7 @@ exports[`The Select Component should render correctly with multiple options and 
       opt1-label
     </option>
     <option
+      selected=""
       value="opt2"
     >
       opt2-label

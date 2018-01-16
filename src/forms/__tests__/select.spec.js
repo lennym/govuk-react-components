@@ -19,7 +19,7 @@ describe('The Select Component', () => {
 
   it('should render correctly with multiple options and one selected', () => {
     expect(
-      render(<Select label="test" name="test" value={'opt2'} options={[{ label: 'opt1-label', value: 'opt1' }, { label: 'opt2-label', value: 'opt2' }]} />)
+      render(<Select label="test" name="test" value={'opt2'} onChange={() => { }} options={[{ label: 'opt1-label', value: 'opt1' }, { label: 'opt2-label', value: 'opt2' }]} />)
     ).toMatchSnapshot()
   });
 
