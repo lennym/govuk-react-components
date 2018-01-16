@@ -9,7 +9,7 @@
     "test:unit-built": "jest --config ./scripts/jest/config.build.js --env=jsdom",
     "test:unit-source": "jest --config ./scripts/jest/config.source.js --env=jsdom",
     "test:watch": "npm run test:unit-source -- --watch",
-    "test:update": "npm run test -- --updateSnapshot",
+    "test:update": "npm run test:unit-source -- --updateSnapshot",
     "build": "npm run build:js && npm run build:css",
     "postbuild": "npm run test",
     "build:js": "babel ./src --out-dir ./components  --ignore '**/*.spec.js'",
