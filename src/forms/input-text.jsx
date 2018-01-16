@@ -16,7 +16,7 @@ class TextInput extends Input {
         id={this.id()}
         name={this.props.name}
         type={this.props.type}
-        defaultValue={this.props.value}
+        {...this.checkedOrUnchecked()}
         />
     </div>;
   }
@@ -29,6 +29,8 @@ TextInput.defaultProps = {
 
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
   id: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.string,

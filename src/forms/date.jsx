@@ -52,7 +52,9 @@ DateInput.defaultProps = {
 };
 
 DateInput.propTypes = {
+  label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
   id: PropTypes.string,
   value: Types.date,
   hint: PropTypes.string,

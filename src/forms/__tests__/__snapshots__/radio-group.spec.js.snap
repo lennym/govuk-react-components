@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Radio Group Component should render a hint when a hint is passed in 1`] = `
+<div
+  class="form-group"
+>
+  <fieldset
+    class=""
+  >
+    <legend
+      class="form-label-bold"
+    >
+      test
+    </legend>
+    <span
+      class="form-hint"
+    >
+      Testing hint
+    </span>
+  </fieldset>
+</div>
+`;
+
+exports[`The Radio Group Component should render an error when an error is passed in 1`] = `
+<div
+  class="form-group form-group-error"
+>
+  <fieldset
+    class=""
+  >
+    <legend
+      class="form-label-bold"
+    >
+      test
+    </legend>
+    <span
+      class="error-message"
+    >
+      Testing error
+    </span>
+  </fieldset>
+</div>
+`;
+
+exports[`The Radio Group Component should render correctly as a controlled input with multiple options and one selected 1`] = `
+<div
+  class="form-group"
+>
+  <fieldset
+    class=""
+  >
+    <legend
+      class="form-label-bold"
+    >
+      test
+    </legend>
+    <div
+      class="multiple-choice"
+    >
+      <input
+        id="test-opt1"
+        name="test"
+        type="radio"
+        value="opt1"
+      />
+      <label
+        for="test-opt1"
+      >
+        opt1-label
+      </label>
+    </div>
+    <div
+      class="multiple-choice"
+    >
+      <input
+        checked=""
+        id="test-opt2"
+        name="test"
+        type="radio"
+        value="opt2"
+      />
+      <label
+        for="test-opt2"
+      >
+        opt2-label
+      </label>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`The Radio Group Component should render correctly with multiple options 1`] = `
+<div
+  class="form-group"
+>
+  <fieldset
+    class=""
+  >
+    <legend
+      class="form-label-bold"
+    >
+      test
+    </legend>
+    <div
+      class="multiple-choice"
+    >
+      <input
+        id="test-opt1"
+        name="test"
+        type="radio"
+        value="opt1"
+      />
+      <label
+        for="test-opt1"
+      >
+        opt1-label
+      </label>
+    </div>
+    <div
+      class="multiple-choice"
+    >
+      <input
+        id="test-opt2"
+        name="test"
+        type="radio"
+        value="opt2"
+      />
+      <label
+        for="test-opt2"
+      >
+        opt2-label
+      </label>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`The Radio Group Component should render correctly with multiple options and one selected 1`] = `
+<div
+  class="form-group"
+>
+  <fieldset
+    class=""
+  >
+    <legend
+      class="form-label-bold"
+    >
+      test
+    </legend>
+    <div
+      class="multiple-choice"
+    >
+      <input
+        id="test-opt1"
+        name="test"
+        type="radio"
+        value="opt1"
+      />
+      <label
+        for="test-opt1"
+      >
+        opt1-label
+      </label>
+    </div>
+    <div
+      class="multiple-choice"
+    >
+      <input
+        checked=""
+        id="test-opt2"
+        name="test"
+        type="radio"
+        value="opt2"
+      />
+      <label
+        for="test-opt2"
+      >
+        opt2-label
+      </label>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`The Radio Group Component should render correctly with no options 1`] = `
+<div
+  class="form-group"
+>
+  <fieldset
+    class=""
+  >
+    <legend
+      class="form-label-bold"
+    >
+      test
+    </legend>
+  </fieldset>
+</div>
+`;
