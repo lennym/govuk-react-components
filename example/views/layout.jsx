@@ -7,7 +7,7 @@ class Layout extends React.Component {
     return (
       <GovUK propositionHeader={this.props.propositionHeader} title={this.props.title}>
         <main className="main" id="content">
-          <PhaseBanner phase="prototype" />
+          <PhaseBanner feedbackUrl="https://github.com/lennym/govuk-react-components" />
           <div className="grid-row">
 
             <div className="column-full">
