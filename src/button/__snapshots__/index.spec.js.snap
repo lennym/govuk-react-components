@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Button Component should append classNames when attribute is passed in 1`] = `
+<button
+  class="button my-additional-classname"
+>
+  Sample Text
+</button>
+`;
+
+exports[`The Button Component should disable when disabled attribute is passed in 1`] = `
+<button
+  class="button"
+  disabled=""
+>
+  Sample Text
+</button>
+`;
+
+exports[`The Button Component should render children that are passed in 1`] = `
+<button
+  class="button"
+>
+  Sample Text
+</button>
+`;

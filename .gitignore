@@ -60,3 +60,6 @@ typings/
 # compiled code created at build time
 components
 assets
+
+# IDEs
+.idea/

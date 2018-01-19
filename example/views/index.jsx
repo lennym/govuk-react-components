@@ -5,6 +5,7 @@ const Input = require('../../components/forms/input-text');
 const RadioGroup = require('../../components/forms/radio-group');
 const Select = require('../../components/forms/select');
 const Date = require('../../components/forms/date');
+const Button = require("../../components/button");
 
 class Index extends React.Component {
   render() {
@@ -71,6 +72,9 @@ class Index extends React.Component {
             hint="Some additional information"
             error="Oh no! You broke it!"
             />
+
+          <h2 className="heading-large">Buttons</h2>
+          <Button type="button">A Button</Button>
         </form>
       </Layout>
     );

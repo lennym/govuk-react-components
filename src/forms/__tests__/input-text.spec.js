@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount, render } from 'enzyme'
+import { render } from 'enzyme'
 import InputText from 'govuk-react-components/forms/input-text';
 
 describe('The Input Text Component', () => {
