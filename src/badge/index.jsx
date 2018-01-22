@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const Badge = (props) => (
@@ -9,11 +9,11 @@ const Badge = (props) => (
 
 Badge.defaultProps = {
   children: ''
-}
+};
 
 Badge.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   className: PropTypes.string
-}
+};
 
 export default Badge;
