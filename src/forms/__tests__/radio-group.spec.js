@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount, render } from 'enzyme'
+import { render } from 'enzyme'
 import RadioGroup from 'govuk-react-components/forms/radio-group';
 
 describe('The Radio Group Component', () => {
