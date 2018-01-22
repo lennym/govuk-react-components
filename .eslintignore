@@ -3,3 +3,4 @@ components
 assets
 scripts
 __tests__
+*.spec.*

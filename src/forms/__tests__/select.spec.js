@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount, render } from 'enzyme'
+import { render } from 'enzyme'
 import Select from 'govuk-react-components/forms/select';
 
 describe('The Select Component', () => {

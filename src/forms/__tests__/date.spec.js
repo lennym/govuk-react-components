@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount, render } from 'enzyme'
+import { render } from 'enzyme'
 import Date from 'govuk-react-components/forms/date';
 
 describe('The Date Component', () => {
