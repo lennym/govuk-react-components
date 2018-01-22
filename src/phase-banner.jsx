@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Badge from './badge';
 
 class PhaseBanner extends React.Component {
 
@@ -15,7 +16,7 @@ class PhaseBanner extends React.Component {
 
     return <div className="phase-banner">
       <p>
-        <strong className="phase-tag">{this.props.phase}</strong>
+        <Badge>{this.props.phase}</Badge>
         { this.renderContent() }
       </p>
     </div>
