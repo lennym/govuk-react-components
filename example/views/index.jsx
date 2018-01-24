@@ -6,6 +6,7 @@ const RadioGroup = require('../../components/forms/radio-group');
 const Select = require('../../components/forms/select');
 const Date = require('../../components/forms/date');
 const {Button, LinkButton, InputButton} = require("../../components/button");
+const ExpandableText = require('../../components/typography/expandable-text');
 
 class Index extends React.Component {
   render() {
@@ -78,6 +79,12 @@ class Index extends React.Component {
           <Button type="button">A Button</Button>
           <h3 className="heading-small">Link</h3>
           <LinkButton href="#buttons">A link button</LinkButton>
+
+          <h2 className="heading-large">Expandable Text</h2>
+          <ExpandableText title="Help with nationality">
+            <p>If you're not sure about your nationality, try to find out from an official document like a passport or national ID card.</p>
+            <p>We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can't provide your nationality, you'll have to send copies of identity documents through the post.</p>
+          </ExpandableText>
         </form>
       </Layout>
     );
