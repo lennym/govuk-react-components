@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Expandable Text Component should correctly apply a class when className prop is provided 1`] = `
+<details
+  class="lorem-ipsum"
+>
+  <summary>
+    <span
+      class="summary"
+    >
+      Lorem ipsum
+    </span>
+  </summary>
+  <div
+    class="panel panel-border-narrow"
+  >
+    Dolor set amet
+  </div>
+</details>
+`;
+
+exports[`The Expandable Text Component should correctly output the open attr when prop passed 1`] = `
+<details
+  open=""
+>
+  <summary>
+    <span
+      class="summary"
+    >
+      Lorem ipsum
+    </span>
+  </summary>
+  <div
+    class="panel panel-border-narrow"
+  >
+    Dolor set amet
+  </div>
+</details>
+`;
+
+exports[`The Expandable Text Component should correctly output the open attr when prop passed 2`] = `
+<details
+  open=""
+>
+  <summary>
+    <span
+      class="summary"
+    >
+      Lorem ipsum
+    </span>
+  </summary>
+  <div
+    class="panel panel-border-narrow"
+  >
+    Dolor set amet
+  </div>
+</details>
+`;
+
+exports[`The Expandable Text Component should render correctly 1`] = `
+<details>
+  <summary>
+    <span
+      class="summary"
+    >
+      Lorem ipsum
+    </span>
+  </summary>
+  <div
+    class="panel panel-border-narrow"
+  >
+    Dolor set amet
+  </div>
+</details>
+`;
+
+exports[`The Expandable Text Component should render correctly when passed a component as a child 1`] = `
+<details>
+  <summary>
+    <span
+      class="summary"
+    >
+      Lorem ipsum
+    </span>
+  </summary>
+  <div
+    class="panel panel-border-narrow"
+  >
+    <span>
+      Dolor set amet
+    </span>
+  </div>
+</details>
+`;
+
+exports[`The Expandable Text Component should render correctly when passed a component as a title 1`] = `
+<details>
+  <summary>
+    <span
+      class="summary"
+    >
+      <span>
+        Lorem ipsum
+      </span>
+    </span>
+  </summary>
+  <div
+    class="panel panel-border-narrow"
+  >
+    Dolor set amet
+  </div>
+</details>
+`;
