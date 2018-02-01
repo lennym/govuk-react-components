@@ -4,8 +4,8 @@ const Input = require('../../components/forms/input-text');
 const RadioGroup = require('../../components/forms/radio-group');
 const Select = require('../../components/forms/select');
 const Date = require('../../components/forms/date');
-const SubNavBar = require('../../components/subnavbar/index');
-const NavItem = require('../../components/subnavbar/navitem').NavItem;
+const SubNavBar = require('../../components/subnavbar').default;
+const NavItem = require('../../components/subnavbar').NavItem;
 const {Button, LinkButton, InputButton} = require("../../components/button");
 const ExpandableText = require('../../components/typography/expandable-text');
 
