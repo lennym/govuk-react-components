@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 export const navItemOf = (Type) => {
   const component = (props) => {
-    const {active, className, ...other} = props;
-    const elemClass = active ? 'active' : '' + className ? ' ' + className : '';
+    const {active, className = '', ...other} = props;
+    const elemClass = (active ? 'active' : '') + (className ? ' ' + className : '');
     return (
       <li>
         <Type {...other} className={elemClass}>{props.children}</Type>
@@ -14,7 +14,6 @@ export const navItemOf = (Type) => {
   component.defaultName = 'NavItemOf' + Type;
   component.propTypes = {
     children: PropTypes.node,
-    disabled: PropTypes.bool,
     className: PropTypes.string,
     active: PropTypes.bool
   };

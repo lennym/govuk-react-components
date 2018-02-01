@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import NavItemA from './navitem';
 
-const SubNavBar = (props) => (
-  <div className="navbar">
+export const SubNavBar = (props) => (
+  <div className={`navbar${props.className ? ' ' +props.className : ''}`}>
     <ul className="navbar__list-items">{props.children}</ul>
   </div>
 );
@@ -13,9 +14,8 @@ SubNavBar.defaultProps = {
 
 SubNavBar.propTypes = {
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func,
-  disabled: PropTypes.bool,
   className: PropTypes.string
 };
 
 export default SubNavBar;
+export const NavItem = NavItemA;
