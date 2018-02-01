@@ -10,13 +10,13 @@ const ExpandableText = ({ title, open, className, children }) => (
 
 ExpandableText.defaultProps = {
   open: false
-}
+};
 
 ExpandableText.propTypes = {
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   open: PropTypes.bool,
   className: PropTypes.string
-}
+};
 
 export default ExpandableText;

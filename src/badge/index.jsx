@@ -12,7 +12,7 @@ Badge.defaultProps = {
 };
 
 Badge.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
 
