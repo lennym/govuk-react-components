@@ -1,10 +1,11 @@
 const React = require('react');
 const Layout = require('./layout');
-
 const Input = require('../../components/forms/input-text');
 const RadioGroup = require('../../components/forms/radio-group');
 const Select = require('../../components/forms/select');
 const Date = require('../../components/forms/date');
+const SubNavBar = require('../../components/subnavbar').default;
+const NavItem = require('../../components/subnavbar').NavItem;
 const {Button, LinkButton, InputButton} = require("../../components/button");
 const ExpandableText = require('../../components/typography/expandable-text');
 
@@ -85,6 +86,13 @@ class Index extends React.Component {
             <p>If you're not sure about your nationality, try to find out from an official document like a passport or national ID card.</p>
             <p>We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can't provide your nationality, you'll have to send copies of identity documents through the post.</p>
           </ExpandableText>
+
+          <h3 className="heading-large">Sub Nav Bar</h3>
+          <SubNavBar>
+            <NavItem href="#item1">Item 1</NavItem>
+            <NavItem href="#item2">Item 2</NavItem>
+            <NavItem href="#item3" active>Item 3</NavItem>
+          </SubNavBar>
         </form>
       </Layout>
     );
