@@ -10,13 +10,8 @@ app.engine('jsx', require('express-react-views').createEngine());
 
 app.use(assets());
 
-app.use((req, res, next) => {
-  res.locals.propositionHeader = 'React Examples';
-  next();
-});
-
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { propositionHeader: 'React Examples' });
 });
 
 app.listen(8080);
