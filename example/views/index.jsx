@@ -1,13 +1,12 @@
-const React = require('react');
-const Layout = require('./layout');
-const Input = require('../../components/forms/input-text');
-const RadioGroup = require('../../components/forms/radio-group');
-const Select = require('../../components/forms/select');
-const Date = require('../../components/forms/date');
-const SubNavBar = require('../../components/subnavbar').default;
-const NavItem = require('../../components/subnavbar').NavItem;
-const {Button, LinkButton, InputButton} = require("../../components/button");
-const ExpandableText = require('../../components/typography/expandable-text');
+import React from 'react';
+import Layout from './layout';
+import Input from '../../components/forms/input-text';
+import RadioGroup from '../../components/forms/radio-group';
+import Select from '../../components/forms/select';
+import Date from '../../components/forms/date';
+import {SubNavBar, NavItem} from '../../components/subnavbar';
+import {Button, LinkButton, InputButton} from "../../components/button";
+import ExpandableText from '../../components/typography/expandable-text';
 
 class Index extends React.Component {
   render() {
@@ -99,4 +98,4 @@ class Index extends React.Component {
   }
 }
 
-module.exports = Index;
+export default Index;
