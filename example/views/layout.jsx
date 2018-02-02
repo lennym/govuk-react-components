@@ -1,6 +1,6 @@
-const React = require('react');
-const GovUK = require('../../components/layout');
-const PhaseBanner = require('../../components/phase-banner');
+import React from 'react';
+import GovUK from '../../components/layout';
+import PhaseBanner from '../../components/phase-banner';
 
 class Layout extends React.Component {
   render() {
@@ -21,4 +21,4 @@ class Layout extends React.Component {
   }
 }
 
-module.exports = Layout;
+export default Layout;
