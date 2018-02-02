@@ -8,6 +8,8 @@ const SubNavBar = require('../../components/subnavbar').default;
 const NavItem = require('../../components/subnavbar').NavItem;
 const {Button, LinkButton, InputButton} = require("../../components/button");
 const ExpandableText = require('../../components/typography/expandable-text');
+const { Card, CardTitle, CardBody } = require('../../components/typography/card/card');
+
 
 class Index extends React.Component {
   render() {
@@ -93,6 +95,20 @@ class Index extends React.Component {
             <NavItem href="#item2">Item 2</NavItem>
             <NavItem href="#item3" active>Item 3</NavItem>
           </SubNavBar>
+
+          <h2 className="heading-large">Cards</h2>
+          <ul className="grid-row">
+            <Card >
+              <CardTitle headline="12" subline="certificates available"/>
+              <CardBody>
+                How many certificates sponsorship have left to use.
+              </CardBody>
+            </Card>
+            <Card>
+              <CardTitle headline="6" subline="certificates used"/>
+              <CardBody>This is how many certificates sponsorship have used.</CardBody>
+            </Card>
+          </ul>
         </form>
       </Layout>
     );
