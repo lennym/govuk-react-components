@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from './layout';
 import Input from '../../components/forms/input-text';
+import TextArea from '../../components/forms/textarea';
 import RadioGroup from '../../components/forms/radio-group';
 import Select from '../../components/forms/select';
 import Date from '../../components/forms/date';
@@ -74,6 +75,14 @@ class Index extends React.Component {
             error="Oh no! You broke it!"
             />
 
+          <h2 className="heading-large">Text Area</h2>
+          <TextArea
+          name="textArea"
+          label="Give me some long text"
+          hint="Some additional information"
+          error="Oh no! You broke it!"
+          />
+
           <h2 className="heading-large" id="buttons">Buttons</h2>
           <h3 className="heading-small">Normal</h3>
           <Button type="button">A Button</Button>
@@ -92,6 +101,7 @@ class Index extends React.Component {
             <NavItem href="#item2">Item 2</NavItem>
             <NavItem href="#item3" active>Item 3</NavItem>
           </SubNavBar>
+
         </form>
       </Layout>
     );
