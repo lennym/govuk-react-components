@@ -1,10 +1,10 @@
 import React from 'react'
-import { render } from 'enzyme'
+import { render, shallow } from 'enzyme'
 import TextArea from 'govuk-react-components/forms/textarea';
 
-describe('The Input Text Component', () => {
+describe('The TextArea Component', () => {
 
-  it('should render correctly when a value is passed in', () => {
+  it('should render the value as content when a value is passed in', () => {
     expect(
       render(<TextArea label="ip" name="ip" value="someText" />)
     ).toMatchSnapshot()
@@ -22,13 +22,15 @@ describe('The Input Text Component', () => {
     ).toMatchSnapshot();
   });
 
-  it('should render as a checked input correctly', () => {
-    expect(
-      render(<TextArea label="ip" name="ip" value="someText" onChange={() => { }} />)
-    ).toMatchSnapshot();
+  it('should call the onChange function when a change is simulated', () => {
+    const newVal = 'someText';
+    const onChange = jest.fn();
+    const field = shallow(<TextArea label="ip" name="ip" onChange={onChange} />);
+    field.find('textarea').simulate('change', newVal);
+    expect(onChange).toBeCalledWith(newVal);
   });
 
-  it('should render cols & rows', () => {
+  it('should render cols & rows when props are given', () => {
     expect(
       render(<TextArea label="ip" name="ip" value="someText" rows={8} cols={10}/>)
     ).toMatchSnapshot()

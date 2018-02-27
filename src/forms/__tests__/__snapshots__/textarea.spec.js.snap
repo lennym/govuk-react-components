@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Input Text Component should render a hint when a hint is passed in 1`] = `
+exports[`The TextArea Component should render a hint when a hint is passed in 1`] = `
 <div
   class="form-group"
 >
@@ -30,7 +30,7 @@ exports[`The Input Text Component should render a hint when a hint is passed in 
 </div>
 `;
 
-exports[`The Input Text Component should render an error when an error is passed in 1`] = `
+exports[`The TextArea Component should render an error when an error is passed in 1`] = `
 <div
   class="form-group form-group-error"
 >
@@ -60,32 +60,7 @@ exports[`The Input Text Component should render an error when an error is passed
 </div>
 `;
 
-exports[`The Input Text Component should render as a checked input correctly 1`] = `
-<div
-  class="form-group"
->
-  <label
-    class="form-label"
-    for="ip"
-  >
-    <span
-      class="form-label-bold"
-    >
-      ip
-    </span>
-  </label>
-  <textarea
-    class="form-control"
-    id="ip"
-    name="ip"
-    rows="4"
-  >
-    someText
-  </textarea>
-</div>
-`;
-
-exports[`The Input Text Component should render cols & rows 1`] = `
+exports[`The TextArea Component should render cols & rows when props are given 1`] = `
 <div
   class="form-group"
 >
@@ -111,7 +86,7 @@ exports[`The Input Text Component should render cols & rows 1`] = `
 </div>
 `;
 
-exports[`The Input Text Component should render correctly when a value is passed in 1`] = `
+exports[`The TextArea Component should render the value as content when a value is passed in 1`] = `
 <div
   class="form-group"
 >
