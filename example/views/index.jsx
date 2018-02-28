@@ -7,6 +7,7 @@ import Date from '../../components/forms/date';
 import {SubNavBar, NavItem} from '../../components/subnavbar';
 import {Button, LinkButton, InputButton} from "../../components/button";
 import ExpandableText from '../../components/typography/expandable-text';
+import OptionSelect, {CheckedOption} from '../../components/option-select';
 
 class Index extends React.Component {
   render() {
@@ -92,6 +93,16 @@ class Index extends React.Component {
             <NavItem href="#item2">Item 2</NavItem>
             <NavItem href="#item3" active>Item 3</NavItem>
           </SubNavBar>
+
+          <h3 className="heading-medium">Option Select</h3>
+
+          <OptionSelect title="Organisations">
+            <CheckedOption name="orgs" id="hmrc" value="hmrc">HM Revenue & Customs (33,576)</CheckedOption>
+            <CheckedOption name="orgs" id="moj" value="moj">Ministry of Justice (10,219)</CheckedOption>
+            <CheckedOption name="orgs" id="et" value="et">Employment Tribunal (6,704)</CheckedOption>
+            <CheckedOption name="orgs" id="ho" value="ho">Home Office (2,714)</CheckedOption>
+          </OptionSelect>
+
         </form>
       </Layout>
     );

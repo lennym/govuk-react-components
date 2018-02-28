@@ -1,36 +1,86 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-const OptionFilter = ({title, description, options}) => (
-  <div className="app-c-option-select js-collapsible" data-closed-on-load="true" data-input-aria-controls="js-live-search-results">
-    <button className="js-container-head" type="button" aria-expanded="true" aria-controls="organisations">
-      <div className="option-select-label" id="option-select-title-organisations">
-        {title}
-      </div>
-      <div className="js-selected-counter">{description}</div>
-    </button>
-    <div role="group" aria-labelledby="option-select-title-organisations" class="options-container" id="organisations" style="max-height: none; height: 160px;">
-      <div className="js-auto-height-inner">
-        <label htmlFor="filter_organisations-hm-revenue-customs">
-          <input name="filter_organisations[]" value="hm-revenue-customs" id="filter_organisations-hm-revenue-customs" type="checkbox" aria-controls="js-live-search-results"/>
+class OptionSelect extends Component {
+  static defaultProps = {
+    defaultOpen: true
+  };
 
-        </label>
-        <label htmlFor="filter_organisations-department-for-international-development">
-          <input name="filter_organisations[]" value="department-for-international-development" id="filter_organisations-department-for-international-development" type="checkbox" aria-controls="js-live-search-results"/>
-            Department for International Development (11,622)
-        </label>
-        <label htmlFor="filter_organisations-ministry-of-justice">
-          <input name="filter_organisations[]" value="ministry-of-justice" id="filter_organisations-ministry-of-justice" type="checkbox" aria-controls="js-live-search-results"/>
-            Ministry of Justice (10,213)
-        </label>
-        <label htmlFor="filter_organisations-hm-courts-and-tribunals-service">
-          <input name="filter_organisations[]" value="hm-courts-and-tribunals-service" id="filter_organisations-hm-courts-and-tribunals-service" type="checkbox" aria-controls="js-live-search-results"/>
-            HM Courts &amp; Tribunals Service (9,294)
-        </label>
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    defaultOpen: PropTypes.bool,
+    children: PropTypes.node.isRequired,
+    style: PropTypes.objectOf(
+      {
+        maxHeight: PropTypes.string.isRequired,
+        height: PropTypes.string.isRequired
+      }
+    )
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: props.defaultOpen ? props.defaultOpen : false
+    }
+  }
+
+  componentDidMount(){
+    this.setState({browser: true})
+  }
+
+  toggle = () => {
+    this.setState((prev) => ({ isOpen: !prev.isOpen }));
+  };
+
+  render() {
+    const { isOpen } = this.state;
+    const { title, description, style } = this.props;
+    const id = title.replace(new RegExp(/\s/, 'g'), '-').toLowerCase();
+    const controls = id + '-options';
+    const labelledBy = id + '-label';
+    const styles = style ? style : { maxHeight: 'none', height: '200px' };
+    return (
+      <div className="app-c-option-select js-collapsible">
+        <button className="js-container-head" type="button" aria-expanded={isOpen} aria-controls={controls}
+                onClick={this.toggle}>
+          <div className="option-select-label" id={labelledBy}>
+            {title}
+          </div>
+          <div className="js-selected-counter">{description}</div>
+        </button>
+        {isOpen && (
+          <div role="group" aria-labelledby={labelledBy}
+               className="options-container options-container--hod" id={controls}
+               style={styles}>
+            <div className="js-auto-height-inner">
+              {this.props.children}
+            </div>
+          </div>
+        )
+        }
       </div>
-    </div>
+    )
+  }
+}
+
+export const CheckedOption = ({ children, name, value, id, ...other }) => (
+  <div className="multiple-choice">
+    <input name={name} value={value} id={id} type="checkbox" {...other} />
+    <label htmlFor={id}>
+      {children}
+    </label>
   </div>
 );
 
-export default OptionFilter
+CheckedOption.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
+};
+
+export default OptionSelect;
 
 

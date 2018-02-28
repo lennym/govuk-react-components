@@ -1,43 +1,39 @@
 import React from 'react'
 import { render } from 'enzyme'
-import {Button, LinkButton} from 'govuk-react-components/button';
+import OptionSelect, { CheckedOption } from './index';
 
-describe('The Standard Button Component', () => {
-  it('should render children that are passed in', () => {
+describe('Option select container', () => {
+  it('should render all required values and be open by default', () => {
     expect(
-      render(<Button>Sample Text</Button>)
+      render(<OptionSelect title="Title">CONTENT SHOULD BE VISIBLE</OptionSelect>)
     ).toMatchSnapshot()
   });
 
-  it('should append classNames when attribute is passed in', () => {
+  it('should render a description when supplied', () => {
     expect(
-      render(<Button className="my-additional-classname">Sample Text</Button>)
-    ).toMatchSnapshot();
+      render(<OptionSelect title="Title" description="description">CONTENT SHOULD BE VISIBLE</OptionSelect>)
+    ).toMatchSnapshot()
   });
 
-  it('should disable when disabled attribute is passed in', () => {
-    expect(
-      render(<Button disabled={true}>Sample Text</Button>)
-    ).toMatchSnapshot();
+  describe('with Checked Options', () => {
+    it('should render them as unchecked by default', () => {
+      expect(
+        render(<OptionSelect title="Title" description="description">
+          <CheckedOption name="name" value="1" id="1">1 CONTENT SHOULD BE VISIBLE</CheckedOption>
+          <CheckedOption name="name" value="2" id="2">2 CONTENT SHOULD BE VISIBLE</CheckedOption>
+          <CheckedOption name="name" value="3" id="3">3 CONTENT SHOULD BE VISIBLE</CheckedOption>
+        </OptionSelect>)
+      ).toMatchSnapshot()
+    });
+
+    it('should render them as checked when specified', () => {
+      expect(
+        render(<OptionSelect title="Title" description="description">
+          <CheckedOption name="name" value="1" id="1">1 CONTENT SHOULD BE VISIBLE</CheckedOption>
+          <CheckedOption name="name" value="2" id="2" checked={true}>2 CONTENT SHOULD BE VISIBLE</CheckedOption>
+          <CheckedOption name="name" value="3" id="3" checked={false}>3 CONTENT SHOULD BE VISIBLE</CheckedOption>
+        </OptionSelect>)
+      ).toMatchSnapshot()
+    });
   });
 });
-
-describe('The link Button Component', () => {
-  it('should render as an <a> tag with the mandatory href', () => {
-    expect(
-      render(<LinkButton href="#test-href">Sample Text</LinkButton>)
-    ).toMatchSnapshot()
-  })
-
-  it('should append classNames when attribute is passed in', () => {
-    expect(
-      render(<LinkButton href="#" className="my-additional-classname">Sample Text</LinkButton>)
-    ).toMatchSnapshot();
-  });
-
-  it('should disable when disabled attribute is passed in', () => {
-    expect(
-      render(<LinkButton href="#" disabled={true}>Sample Text</LinkButton>)
-    ).toMatchSnapshot();
-  });
-})
