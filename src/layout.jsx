@@ -52,7 +52,13 @@ class Layout extends React.Component {
                 <div className="header-proposition">
                   <div className="content">
                     <nav id="proposition-menu">
-                      <a href={this.props.propositionHeaderLink} id="proposition-name">{this.props.propositionHeader}</a>
+                      {
+                        this.props.propositionHeaderLink &&
+                        <a href={this.props.propositionHeaderLink} id="proposition-name">{this.props.propositionHeader}</a>
+                      }
+                      {
+                        !this.props.propositionHeaderLink && this.props.propositionHeader
+                      }
                     </nav>
                   </div>
                 </div>
