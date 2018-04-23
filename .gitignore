@@ -59,7 +59,7 @@ typings/
 
 # compiled code created at build time
 components
-assets
+/assets
 
 # IDEs
 .idea/

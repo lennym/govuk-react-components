@@ -4,6 +4,7 @@
   "description": "React components for govuk layouts and elements",
   "main": "index.js",
   "scripts": {
+    "dev": "npm run build:watch | npm run build:js:client -- --watch | nodemon ./example/index.js",
     "lint": "eslint .",
     "pretest": "npm run build",
     "test": "npm run lint && npm run test:unit-built",
@@ -12,7 +13,9 @@
     "test:watch": "npm run test:unit-source -- --watch",
     "test:update": "npm run test:unit-source -- --updateSnapshot",
     "build": "npm run build:js && npm run build:css",
+    "build:watch": "npm run build:js -- --watch | npm run build:css -- --watch",
     "build:js": "babel ./src --out-dir ./components  --ignore '**/*.spec.js'",
+    "build:js:client": "webpack",
     "prebuild:css": "mkdir -p ./assets",
     "build:css": "npm-sass ./src/styles/elements.scss > ./assets/elements.css",
     "prepublish": "npm run build",
@@ -33,13 +36,16 @@
     "express": "^4.16.2",
     "govuk_template_mustache": "^0.23.0",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0"
+    "react": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "all-contributors-cli": "^4.10.1",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.0.6",
+    "babel-loader": "^7.1.4",
     "babel-plugin-add-module-exports": "0.2.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -56,7 +62,9 @@
     "jest-serializer-html": "^5.0.0",
     "npm-sass": "^2.2.1",
     "react-dom": "^16.2.0",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14"
   },
   "files": [
     "components/*",

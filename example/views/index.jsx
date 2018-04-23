@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { sampleSize } from 'lodash'
 import Layout from './layout';
 import Input from '../../components/forms/input-text';
 import RadioGroup from '../../components/forms/radio-group';
@@ -8,8 +9,19 @@ import {SubNavBar, NavItem} from '../../components/subnavbar';
 import {Button, LinkButton, InputButton} from "../../components/button";
 import ExpandableText from '../../components/typography/expandable-text';
 import OptionSelect, {CheckedOption} from '../../components/option-select';
-import { TabBar } from '../../components/tabbar'
-import { TabItem } from '../../components/tabbar/tabitem'
+import { TabBar } from '../../components/tabbar';
+import { TabItem } from '../../components/tabbar/tabitem';
+import DataTable from '../../components/datatable';
+import places from '../data/places';
+import schema from '../schema/places';
+
+const formatters = {
+  suitability: { format: arr => arr.join(', ') },
+  holding: { format: arr => arr.join(', ') },
+  nacwo: { title: key => key.toUpperCase() }
+};
+
+const data = sampleSize(places, 20);
 
 class Index extends React.Component {
   render() {
@@ -123,10 +135,49 @@ class Index extends React.Component {
               </TabBar>
             </div>
           </div>
+
+          <h3 className="heading-large">Data Tables</h3>
+          <h2 className="heading-medium">Simple table</h2>
+          <DataTable
+            data={[
+              {
+                site: 'Site A',
+                suitability: 'AB',
+                holding: 'AB',
+                area: '1st Floor',
+                name: '1.24',
+              },
+              {
+                site: 'Site B',
+                suitability: 'CD',
+                holding: 'EF',
+                area: '2nd Floor',
+                name: '2.78',
+              },
+              {
+                site: 'Site C',
+                suitability: 'EF',
+                holding: 'CD',
+                area: '1st Floor',
+                name: '1.11',
+              }
+            ]}
+          />
+          <h2 className="heading-medium">With schema, formatters and nested data</h2>
+          <DataTable
+            data={data}
+            schema={schema}
+            formatters={formatters}
+            onChange={sort => {
+              console.log(sort);
+            }}
+          />
         </form>
       </Layout>
     );
   }
 }
+
+
 
 export default Index;
