@@ -3,7 +3,7 @@ import { orderBy, get } from 'lodash';
 import table from './table';
 import sort from './sort'
 
-export const sortData = ({ table: { data, schema }, sort: { ascending, column } }) =>
+export const getSortedData = ({ table: { data, schema }, sort: { ascending, column } }) =>
   column
     ? orderBy(data, item =>
       get(item, schema[column] && schema[column].accessor || column),

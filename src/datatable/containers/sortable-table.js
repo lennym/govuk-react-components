@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import Table from './table';
-import { sortData } from './reducers';
+import { getSortedData } from '../reducers';
+import Table from '../table';
 
 const mapStateToProps = state => ({
-  data: sortData(state),
+  data: getSortedData(state),
   schema: state.table.schema
 });
 

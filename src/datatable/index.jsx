@@ -3,8 +3,9 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { noop } from 'lodash';
 import rootReducer from './reducers';
-import { setData, setSchema, setSort } from './actions'
-import Datatable from './sortable-table';
+import { setData, setSort } from './actions'
+import sort from './reducers/sort';
+import Datatable from './containers/sortable-table';
 
 class DataTable extends Component {
   constructor(options) {
@@ -14,19 +15,20 @@ class DataTable extends Component {
       schema = {},
       sort
     } = this.props;
+    this.store = createStore(rootReducer, {
+      table: { data, schema },
+      sort
+    }, applyMiddleware(this.emitChange));
+  }
 
-    this.store = createStore(rootReducer, applyMiddleware(this.emitChange));
-    this.store.dispatch(setData(data));
-    this.store.dispatch(setSchema(schema));
-    if (sort) {
-      this.store.dispatch(setSort(sort));
-    }
+  componentWillReceiveProps(props) {
+    this.store.dispatch(setData(props.data));
   }
 
   emitChange = store => next => action => {
     const result = next(action);
     if (action.type === 'SET_SORT_COLUMN') {
-      this.props.onChange(store.getState().sort)
+      this.props.onChange(store.getState().sort);
     }
     return result;
   }
@@ -43,5 +45,11 @@ class DataTable extends Component {
     );
   }
 }
+
+// export sort reducer and setSort action so sort can be persisted by parent scope
+export {
+  setSort,
+  sort
+};
 
 export default DataTable;

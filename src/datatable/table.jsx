@@ -1,6 +1,6 @@
 import React from 'react';
 import { map, merge, pickBy, get, isEmpty } from 'lodash';
-import TableHeader from './connected-table-header';
+import TableHeader from './containers/connected-table-header';
 
 const Table = ({
   data,

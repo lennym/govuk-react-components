@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import TableHeader from './table-header';
-import { setSortColumn } from './actions'
+import { setSortColumn } from '../actions'
+import TableHeader from '../table-header';
 
 const mapStateToProps = ({
   sort: {

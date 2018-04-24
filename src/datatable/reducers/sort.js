@@ -4,6 +4,7 @@ const INITIAL_STATE = {
 };
 
 const sortReducer = (state = INITIAL_STATE, action) => {
+  // console.log(action);
   switch (action.type) {
     case 'SET_SORT_COLUMN':
       return {
