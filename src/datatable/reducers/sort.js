@@ -4,7 +4,6 @@ const INITIAL_STATE = {
 };
 
 const sortReducer = (state = INITIAL_STATE, action) => {
-  // console.log(action);
   switch (action.type) {
     case 'SET_SORT_COLUMN':
       return {
@@ -12,10 +11,7 @@ const sortReducer = (state = INITIAL_STATE, action) => {
         ascending: state.column === action.column ? !state.ascending : true
       };
     case 'SET_SORT':
-      return {
-        column: action.sort.column,
-        ascending: JSON.parse(action.sort.ascending)
-      };
+      return action.sort;
   }
   return state;
 };

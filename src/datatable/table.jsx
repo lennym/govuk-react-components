@@ -1,5 +1,5 @@
 import React from 'react';
-import { map, merge, pickBy, get, isEmpty } from 'lodash';
+import { map, merge, pickBy, get, isEmpty, isUndefined } from 'lodash';
 import TableHeader from './containers/connected-table-header';
 
 const Table = ({
@@ -7,6 +7,9 @@ const Table = ({
   schema,
   formatters
 } = {}) => {
+  if (isUndefined(data)) {
+    throw new Error('data must be provided');
+  }
   const columns = !isEmpty(schema)
     ? merge({}, pickBy(schema, v => v.show), formatters)
     : Object.keys(data[0]).reduce((obj, key) => ({ ...obj, [key]: {} }), {});

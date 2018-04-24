@@ -5,7 +5,7 @@ import { noop } from 'lodash';
 import rootReducer from './reducers';
 import { setData, setSort } from './actions'
 import sort from './reducers/sort';
-import Datatable from './containers/sortable-table';
+import SortableTable from './containers/sortable-table';
 
 class DataTable extends Component {
   constructor(options) {
@@ -40,7 +40,7 @@ class DataTable extends Component {
   render() {
     return (
       <Provider store={this.store}>
-        <Datatable formatters={this.props.formatters} />
+        <SortableTable formatters={this.props.formatters} />
       </Provider>
     );
   }

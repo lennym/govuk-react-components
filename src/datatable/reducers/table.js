@@ -3,7 +3,7 @@ const INITIAL_STATE = {
   schema: {}
 };
 
-const dataReducer = (state = {}, action) => {
+const dataReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'SET_DATA':
       return {
