@@ -1,0 +1,18 @@
+import { combineReducers } from 'redux';
+import { orderBy, get } from 'lodash';
+import table from './table';
+import sort from './sort'
+
+export const getSortedData = ({ table: { data, schema }, sort: { ascending, column } }) =>
+  column
+    ? orderBy(data, item =>
+      schema[column] && schema[column].sort
+        ? schema[column].sort(item)
+        : get(item, schema[column] && schema[column].accessor || column),
+          ascending ? 'asc' : 'desc')
+    : data;
+
+export default combineReducers({
+  table,
+  sort
+});

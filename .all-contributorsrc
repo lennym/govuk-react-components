@@ -46,6 +46,18 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "joefitter",
+      "name": "Joe Fitter",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3604142?v=4",
+      "profile": "http://github.com/joefitter",
+      "contributions": [
+        "code",
+        "doc",
+        "example",
+        "test"
+      ]
     }
   ]
 }

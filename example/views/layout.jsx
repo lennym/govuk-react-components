@@ -5,7 +5,11 @@ import PhaseBanner from '../../components/phase-banner';
 class Layout extends React.Component {
   render() {
     return (
-      <GovUK propositionHeader={this.props.propositionHeader} title={this.props.title}>
+      <GovUK
+        propositionHeader={this.props.propositionHeader}
+        title={this.props.title}
+        scripts={['/govuk/bundle.js']}
+      >
         <main className="main" id="content">
           <PhaseBanner feedbackUrl="https://github.com/lennym/govuk-react-components" />
           <div className="grid-row">
