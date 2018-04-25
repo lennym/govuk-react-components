@@ -13,7 +13,7 @@
     "test:watch": "npm run test:unit-source -- --watch",
     "test:update": "npm run test:unit-source -- --updateSnapshot",
     "build": "npm run build:js && npm run build:css",
-    "build:watch": "npm run build:js -- --watch | npm run build:css -- --watch",
+    "build:watch": "npm run build:css && npm run build:js -- --watch",
     "build:js": "babel ./src --out-dir ./components  --ignore '**/*.spec.js'",
     "build:js:client": "webpack",
     "prebuild:css": "mkdir -p ./assets",

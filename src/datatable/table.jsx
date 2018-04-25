@@ -31,7 +31,7 @@ const Table = ({
               {
                 map(columns, ({ format, accessor }, key) => {
                   const datum = get(row, accessor || key);
-                  return <td key={key}>{ format ? format(datum, row[key]) : datum }</td>;
+                  return <td key={key}>{ format ? format(datum, row[key], row) : datum }</td>;
                 })
               }
             </tr>

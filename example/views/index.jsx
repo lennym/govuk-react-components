@@ -12,16 +12,27 @@ import OptionSelect, {CheckedOption} from '../../components/option-select';
 import { TabBar } from '../../components/tabbar';
 import { TabItem } from '../../components/tabbar/tabitem';
 import DataTable from '../../components/datatable';
-import places from '../data/places';
-import schema from '../schema/places';
+import people from '../data/people';
+import schema from '../schema/people';
 
 const formatters = {
-  suitability: { format: arr => arr.join(', ') },
-  holding: { format: arr => arr.join(', ') },
-  nacwo: { title: key => key.toUpperCase() }
+  email: {
+    format: val => <a href={`mailto:${val}`}>{val}</a>
+  },
+  address: {
+    format: (val, raw, row) => {
+      return <span>{row.street}<br />{row.city}<br />{row.country}</span>
+    }
+  },
+  phoneNumber: {
+    title: () => 'Number'
+  },
+  animals: {
+    format: val => <ul>{val.map(animal => <li>{animal}</li>)}</ul>
+  }
 };
 
-const data = sampleSize(places, 20);
+const data = sampleSize(people, 20);
 
 class Index extends React.Component {
   render() {
