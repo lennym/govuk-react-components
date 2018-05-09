@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StatusBar from './status-bar';
 
 class Layout extends React.Component {
 
@@ -62,7 +61,7 @@ class Layout extends React.Component {
                       }
                     </nav>
                     {
-                      this.props.statusBar && <StatusBar {...this.props.statusBar} />
+                      this.props.headerContent && this.props.headerContent
                     }
                   </div>
                 </div>
