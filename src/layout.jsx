@@ -60,6 +60,9 @@ class Layout extends React.Component {
                         !this.props.propositionHeaderLink && this.props.propositionHeader
                       }
                     </nav>
+                    {
+                      this.props.headerContent && this.props.headerContent
+                    }
                   </div>
                 </div>
               }
