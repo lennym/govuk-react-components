@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, isValidElement } from 'react';
 import PropTypes from 'prop-types';
 
 class OptionSelect extends Component {
@@ -7,8 +7,20 @@ class OptionSelect extends Component {
   };
 
   static propTypes = {
-    title: PropTypes.string.isRequired,
+    title(props) {
+      if (isValidElement(props.title)) {
+        if (typeof props.id === 'undefined') {
+          return new Error('Title must be a string if id is not provided');
+        }
+        return null;
+      }
+      if (typeof props.title === 'string') {
+        return null;
+      }
+      return new Error('Title must be either a String or a valid React element');
+    },
     description: PropTypes.string,
+    id: PropTypes.string,
     defaultOpen: PropTypes.bool,
     children: PropTypes.node.isRequired,
     style: PropTypes.objectOf(
@@ -37,7 +49,7 @@ class OptionSelect extends Component {
   render() {
     const { isOpen } = this.state;
     const { title, description, style } = this.props;
-    const id = title.replace(new RegExp(/\s/, 'g'), '-').toLowerCase();
+    const id = this.props.id || title.replace(new RegExp(/\s/, 'g'), '-').toLowerCase();
     const controls = id + '-options';
     const labelledBy = id + '-label';
     const styles = style ? style : { maxHeight: 'none', height: '200px' };
@@ -82,5 +94,3 @@ CheckedOption.propTypes = {
 };
 
 export default OptionSelect;
-
-
