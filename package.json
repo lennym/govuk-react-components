@@ -1,6 +1,6 @@
 {
   "name": "govuk-react-components",
-  "version": "0.3.3",
+  "version": "0.7.1",
   "description": "React components for govuk layouts and elements",
   "main": "index.js",
   "scripts": {

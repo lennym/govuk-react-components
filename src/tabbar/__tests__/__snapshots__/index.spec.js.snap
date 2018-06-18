@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The TabBar Component With NavItems should render a navitem inside a subnavbar 1`] = `
+<ul
+  class="tab__nav horizontal "
+>
+  <li>
+    <a
+      class=""
+      href="#test"
+    >
+      Item A
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`The TabBar Component With NavItems should render an included classname 1`] = `
+<ul
+  class="tab__nav horizontal "
+>
+  <li>
+    <a
+      class=" class-name"
+      href="#test"
+    >
+      Item A
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`The TabBar Component With NavItems should render multiple navitems inside a subnavbar 1`] = `
+<ul
+  class="tab__nav horizontal "
+>
+  <li>
+    <a
+      class=""
+      href="#itema"
+    >
+      Item A
+    </a>
+  </li>
+  <li>
+    <a
+      class=""
+      href="#itemb"
+    >
+      Item B
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`The TabBar Component With NavItems should render with an active class if the active flag is true 1`] = `
+<ul
+  class="tab__nav horizontal "
+>
+  <li>
+    <a
+      class="active class-name"
+      href="#test"
+    >
+      Item A
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`The TabBar Component should render an included classname 1`] = `
+<ul
+  class="tab__nav horizontal  class name"
+>
+  Sample Text
+</ul>
+`;
+
+exports[`The TabBar Component should render children that are passed in 1`] = `
+<ul
+  class="tab__nav horizontal "
+>
+  Sample Text
+</ul>
+`;
+
+exports[`The TabBar Component should render with a vertical class name with a "vertical" prop 1`] = `
+<ul
+  class="tab__nav vertical  class name"
+>
+  Sample Text
+</ul>
+`;

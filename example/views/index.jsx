@@ -8,6 +8,9 @@ import Date from '../../components/forms/date';
 import {SubNavBar, NavItem} from '../../components/subnavbar';
 import {Button, LinkButton, InputButton} from "../../components/button";
 import ExpandableText from '../../components/typography/expandable-text';
+import OptionSelect, {CheckedOption} from '../../components/option-select';
+import { TabBar } from '../../components/tabbar'
+import { TabItem } from '../../components/tabbar/tabitem'
 
 class Index extends React.Component {
   render() {
@@ -23,7 +26,7 @@ class Index extends React.Component {
             hint="Some additional information"
             error="Oh no! You broke it!"
             value="HELLO!"
-            />
+          />
 
           <h2 className="heading-large">Radio group</h2>
           <RadioGroup
@@ -36,7 +39,7 @@ class Index extends React.Component {
             value={1}
             hint="Some additional information"
             error="Oh no! You broke it!"
-            />
+          />
 
           <h2 className="heading-large">Checkbox group</h2>
           <RadioGroup
@@ -51,7 +54,7 @@ class Index extends React.Component {
             value={[1,3]}
             hint="Some additional information"
             error="Oh no! You broke it!"
-            />
+          />
 
           <h2 className="heading-large">Select</h2>
           <Select
@@ -64,7 +67,7 @@ class Index extends React.Component {
             value={1}
             hint="Some additional information"
             error="Oh no! You broke it!"
-            />
+          />
 
           <h2 className="heading-large">Date input</h2>
           <Date
@@ -73,7 +76,7 @@ class Index extends React.Component {
             value="2018-01-31"
             hint="Some additional information"
             error="Oh no! You broke it!"
-            />
+          />
 
           <h2 className="heading-large">Text Area</h2>
           <TextArea
@@ -101,7 +104,34 @@ class Index extends React.Component {
             <NavItem href="#item2">Item 2</NavItem>
             <NavItem href="#item3" active>Item 3</NavItem>
           </SubNavBar>
+          
+          <h3 className="heading-medium">Option Select</h3>
 
+          <OptionSelect title="Organisations">
+            <CheckedOption name="orgs" id="hmrc" value="hmrc">HM Revenue & Customs (33,576)</CheckedOption>
+            <CheckedOption name="orgs" id="moj" value="moj">Ministry of Justice (10,219)</CheckedOption>
+            <CheckedOption name="orgs" id="et" value="et">Employment Tribunal (6,704)</CheckedOption>
+            <CheckedOption name="orgs" id="ho" value="ho">Home Office (2,714)</CheckedOption>
+          </OptionSelect>
+
+          <h3 className="heading-large">Tabs</h3>
+          <h4 className="heading-small">Horizontal</h4>
+          <TabBar>
+            <TabItem href="#tab1">Tab 1</TabItem>
+            <TabItem href="#tab2" active={true}>Tab 2</TabItem>
+            <TabItem href="#tab3">Tab 3</TabItem>
+          </TabBar>
+
+          <h4 className="heading-small">Vertical</h4>
+          <div className="grid-row">
+            <div className="column-one-third">
+              <TabBar vertical={true}>
+                <TabItem href="#tab1">Tab 1</TabItem>
+                <TabItem href="#tab2" active={true}>Tab 2</TabItem>
+                <TabItem href="#tab3">Tab 3</TabItem>
+              </TabBar>
+            </div>
+          </div>
         </form>
       </Layout>
     );
