@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class TextArea extends Input {
 
   render() {
-    const {label, hint, error, name, rows, cols, disabled, readonly} = this.props;
+    const {label, hint, error, name, rows, cols, disabled, readonly, ...other} = this.props;
     return <div className={this.errorClass('form-group')}>
       <label className="form-label" htmlFor={this.id()}>
         <span className="form-label-bold">{label}</span>
@@ -20,6 +20,7 @@ class TextArea extends Input {
         cols={cols}
         disabled={disabled}
         readOnly={readonly}
+        {...other}
         {...this.checkedOrUnchecked()}
         />
     </div>;
