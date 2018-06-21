@@ -1,10 +1,8 @@
-import path from 'path';
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import { terser } from "rollup-plugin-terser";
-import visualizer from 'rollup-plugin-visualizer';
 
 var pkg = require('./package.json');
 var externalDeps = Object.keys(
@@ -44,8 +42,7 @@ export default {
     resolve({
       extensions:['.js','.jsx']
     }),
-    commonjs(),
-    visualizer({ filename: './dist/bundle-stats.html' })
+    commonjs()
   ],
 
   external: ['react'].concat(external),
