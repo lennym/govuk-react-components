@@ -1,11 +1,11 @@
 import React from 'react';
-import GovUK from '../../components/layout';
-import PhaseBanner from '../../components/phase-banner';
+import {Layout, PhaseBanner} from '../../dist/govuk-react-components';
 
-class Layout extends React.Component {
+
+class Page extends React.Component {
   render() {
     return (
-      <GovUK propositionHeader={this.props.propositionHeader} title={this.props.title}>
+      <Layout propositionHeader={this.props.propositionHeader} title={this.props.title}>
         <main className="main" id="content">
           <PhaseBanner feedbackUrl="https://github.com/lennym/govuk-react-components" />
           <div className="grid-row">
@@ -16,9 +16,9 @@ class Layout extends React.Component {
 
           </div>
         </main>
-      </GovUK>
+      </Layout>
     );
   }
 }
 
-export default Layout;
+export default Page;
