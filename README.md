@@ -41,7 +41,7 @@ export default MyForm;
 
 ## Loading assets
 
-To include the necessary stylesheets and assets in your app you can - if you are using express - mount the included middleware to serve these files:
+To include the necessary stylesheets and assets in your nodejs app you can - if you are using express - mount the included middleware to serve these files:
 
 ```js
 app.use(require('govuk-react-components/middleware').assets());
