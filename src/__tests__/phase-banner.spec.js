@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount, render } from 'enzyme'
-import PhaseBanner from 'govuk-react-components/phase-banner';
+import { PhaseBanner } from 'govuk-react-components';
 
 describe('The Phase Banner Component', () => {
 

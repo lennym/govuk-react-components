@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'enzyme'
-import {Button, LinkButton} from 'govuk-react-components/button';
+import {Button, LinkButton} from 'govuk-react-components';
 
 describe('The Standard Button Component', () => {
   it('should render children that are passed in', () => {

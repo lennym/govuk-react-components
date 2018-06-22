@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'enzyme'
-import OptionSelect, { CheckedOption } from './index';
+import { OptionSelect, CheckedOption } from 'govuk-react-components';
 
 describe('Option select container', () => {
   it('should render all required values and be open by default', () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'enzyme'
-import Select from 'govuk-react-components/forms/select';
+import {Select} from 'govuk-react-components';
 
 describe('The Select Component', () => {
 

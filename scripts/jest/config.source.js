@@ -10,7 +10,7 @@ module.exports = {
   // Only include files directly in __tests__, not in nested folders.
   rootDir: process.cwd(),
   roots: ['<rootDir>/src'],
-  collectCoverageFrom: ['src/**/*.js'],
+  collectCoverageFrom: ['src/**/*.js', 'src/**/*.jsx'],
   timers: 'fake',
   moduleNameMapper: moduleNameMapper,
   snapshotSerializers: [

@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, shallow } from 'enzyme'
-import TextArea from 'govuk-react-components/forms/textarea';
+import {TextArea} from 'govuk-react-components';
 
 describe('The TextArea Component', () => {
 

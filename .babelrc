@@ -5,5 +5,14 @@
     "react"
   ],
   "plugins": [
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["env", {"modules": "commonjs"}],
+        "stage-0",
+        "react"
+      ]
+    }
+  }
 }
