@@ -1,0 +1,29 @@
+---
+name: Input
+menu: Forms
+---
+import { Playground, PropsTable } from 'docz';
+import {Input} from '../../';
+
+# Input
+
+## Basic Usage
+
+<Playground>
+  <Input
+    name="name"
+    label="First name"
+  />
+  <Input
+    name="name"
+    label="Surname"
+    hint="Some additional information"
+    error="Oh no! You broke it!"
+    value="Bloggs"
+  />
+</Playground>
+
+
+## Props
+<PropsTable of={Input} />
+

@@ -1,0 +1,32 @@
+---
+name: Tab bar
+---
+
+import { Playground, PropsTable } from 'docz';
+import { TabBar, TabItem } from '../';
+
+# Option Select
+## Horizontal Usage
+<Playground>
+  <TabBar>
+    <TabItem>Tab 1</TabItem>
+    <TabItem>Tab 2</TabItem>
+    <TabItem active={true}>Tab 3</TabItem>
+  </TabBar>
+</Playground>
+
+## Vertical Usage
+<Playground>
+  <TabBar vertical={true}>
+    <TabItem>Tab 1</TabItem>
+    <TabItem>Tab 2</TabItem>
+    <TabItem active={true}>Tab 3</TabItem>
+  </TabBar>
+</Playground>
+
+## Props
+### TabBar
+<PropsTable of={TabBar} />
+
+### TabItem
+<PropsTable of={TabItem} />

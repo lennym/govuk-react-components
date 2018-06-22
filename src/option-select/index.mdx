@@ -1,0 +1,20 @@
+---
+name: Option Select
+---
+
+import { Playground, PropsTable } from 'docz';
+import { OptionSelect, CheckedOption } from '../';
+
+# Option Select
+## Basic Usage
+<Playground>
+  <OptionSelect title="Organisations">
+    <CheckedOption name="orgs" id="hmrc" value="hmrc">HM Revenue & Customs (33,576)</CheckedOption>
+    <CheckedOption name="orgs" id="moj" value="moj">Ministry of Justice (10,219)</CheckedOption>
+    <CheckedOption name="orgs" id="et" value="et">Employment Tribunal (6,704)</CheckedOption>
+    <CheckedOption name="orgs" id="ho" value="ho">Home Office (2,714)</CheckedOption>
+  </OptionSelect>
+</Playground>
+
+## Props
+<PropsTable of={OptionSelect} />

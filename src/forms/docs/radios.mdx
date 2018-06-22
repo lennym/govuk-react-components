@@ -1,0 +1,39 @@
+---
+name: Radio Group
+menu: Forms
+---
+import { Playground, PropsTable } from 'docz';
+import {RadioGroup} from '../../';
+
+# Input
+
+## Basic Usage
+
+<Playground>
+  <RadioGroup
+    name="option"
+    label="Pick an option"
+    options={[
+    { label: 'Test', value: 'test'},
+    { label: 'Test 1', value: 'test-1'},
+    { label: 'Test 2', value: 'test-2'},
+    ]}
+  />
+  <RadioGroup
+    name="name"
+    label="Pick an option"
+    hint="Some additional information"
+    error="Oh no! You broke it!"
+    value="test-1"
+        options={[
+        { label: 'Test', value: 'test'},
+        { label: 'Test 1', value: 'test-1'},
+        { label: 'Test 2', value: 'test-2'},
+        ]}
+  />
+</Playground>
+
+
+## Props
+<PropsTable of={RadioGroup} />
+

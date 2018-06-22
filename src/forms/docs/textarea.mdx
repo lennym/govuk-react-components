@@ -1,0 +1,29 @@
+---
+name: Textarea
+menu: Forms
+---
+import { Playground, PropsTable } from 'docz';
+import {TextArea} from '../../';
+
+# Textarea
+
+## Basic Usage
+
+<Playground>
+  <TextArea
+    name="textarea"
+    label="Enter description"
+  />
+  <TextArea
+    name="textarea"
+    label="Enter description"
+    hint="Some additional information"
+    error="Oh no! You broke it!"
+    value="I'm a text area"
+  />
+</Playground>
+
+
+## Props
+<PropsTable of={TextArea} />
+

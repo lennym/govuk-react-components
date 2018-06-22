@@ -5,3 +5,4 @@ assets
 scripts
 __tests__
 *.spec.*
+docz-wrapper.js*

@@ -1,0 +1,24 @@
+---
+name: Sub Nav Bar
+---
+import { Playground, PropsTable } from 'docz';
+import {SubNavBar, SubNavItem} from '../';
+
+# Sub Nav Bar
+
+## Basic Usage
+
+<Playground>
+  <SubNavBar>
+    <SubNavItem>Item 1</SubNavItem>
+    <SubNavItem>Item 2</SubNavItem>
+    <SubNavItem active={true}>Item active</SubNavItem>
+  </SubNavBar>
+</Playground>
+
+
+## SubNavBar props
+<PropsTable of={SubNavBar} />
+
+## SubNavItem props
+<PropsTable of={SubNavItem} />

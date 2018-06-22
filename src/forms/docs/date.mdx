@@ -1,0 +1,28 @@
+---
+name: Date Input
+menu: Forms
+---
+import { Playground, PropsTable } from 'docz';
+import {DateInput} from '../../';
+
+# Date Input
+
+## Basic Usage
+
+<Playground>
+  <DateInput
+    name="dob"
+    label="Date of birth"
+  />
+  <DateInput
+    name="dob"
+    label="Date of birth"
+    hint="Some additional information"
+    error="Oh no! You broke it!"
+    value="Bloggs"
+  />
+</Playground>
+
+
+## Props
+<PropsTable of={DateInput} />
