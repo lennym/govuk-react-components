@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'enzyme'
-import Badge from 'govuk-react-components/badge';
+import {Badge} from 'govuk-react-components';
 
 describe('The Badge Component', () => {
   it('should render children that are passed in', () => {

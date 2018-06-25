@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'enzyme'
-import RadioGroup from 'govuk-react-components/forms/radio-group';
+import {RadioGroup} from '../../';
 
 describe('The Radio Group Component', () => {
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'enzyme'
-import Date from 'govuk-react-components/forms/date';
+import {DateInput as Date} from 'govuk-react-components';
 
 describe('The Date Component', () => {
 

@@ -1,4 +1,4 @@
-module.exports = superclass => class MultipleChoice extends superclass {
+export default (superclass) => class MultipleChoice extends superclass {
 
   optionId(opt) {
     return `${this.id()}-${opt.value.toString().toLowerCase().replace(/[^a-z0-9-]/g, '')}`;
@@ -21,3 +21,4 @@ module.exports = superclass => class MultipleChoice extends superclass {
   }
 
 };
+

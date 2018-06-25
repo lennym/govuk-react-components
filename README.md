@@ -9,12 +9,42 @@ This is *very* Work In Progress code at the moment so you almost certainly don't
 
 Contributions are welcome.
 
+## Using components
+Install the package and any dependencies you have:
+```bash
+# Install govuk-react-components
+npm install --save govuk-react-components
+
+# This project assumes react & prop-types are installed already. If not use the following
+npm install --save govuk-react-components react prop-types
+```
+
+Components can then be used in the following way:
+```jsx
+import React from 'react';
+import { Input, Button } from 'govuk-react-components';
+
+const MyForm = () => (
+  <form>
+    <Input name="name"
+           label="First name"
+           hint="Some additional information"
+           error="Oh no! You broke it!"
+           value="HELLO!"
+    />
+    <Button>Submit</Button>
+  </form>
+);
+
+export default MyForm;
+```
+
 ## Loading assets
 
-To include the necessary stylesheets and assets in your app you can - if you are using express - mount the included middleware to serve these files:
+To include the necessary stylesheets and assets in your nodejs app you can - if you are using express - mount the included middleware to serve these files:
 
 ```js
-app.use(require('govuk-react-components').assets());
+app.use(require('govuk-react-components/middleware').assets());
 ```
 
 ## Examples

@@ -1,16 +1,21 @@
 import React from 'react';
+import {
+  Input,
+  TextArea,
+  RadioGroup,
+  Select,
+  DateInput,
+  SubNavBar,
+  SubNavItem as NavItem,
+  Button,
+  LinkButton,
+  ExpandableText,
+  OptionSelect,
+  CheckedOption,
+  TabBar,
+  TabItem
+} from '../../dist/govuk-react-components'
 import Layout from './layout';
-import Input from '../../components/forms/input-text';
-import TextArea from '../../components/forms/textarea';
-import RadioGroup from '../../components/forms/radio-group';
-import Select from '../../components/forms/select';
-import Date from '../../components/forms/date';
-import {SubNavBar, NavItem} from '../../components/subnavbar';
-import {Button, LinkButton, InputButton} from "../../components/button";
-import ExpandableText from '../../components/typography/expandable-text';
-import OptionSelect, {CheckedOption} from '../../components/option-select';
-import { TabBar } from '../../components/tabbar'
-import { TabItem } from '../../components/tabbar/tabitem'
 
 class Index extends React.Component {
   render() {
@@ -70,7 +75,7 @@ class Index extends React.Component {
           />
 
           <h2 className="heading-large">Date input</h2>
-          <Date
+          <DateInput
             name="date"
             label="Enter a date"
             value="2018-01-31"
@@ -104,7 +109,7 @@ class Index extends React.Component {
             <NavItem href="#item2">Item 2</NavItem>
             <NavItem href="#item3" active>Item 3</NavItem>
           </SubNavBar>
-          
+
           <h3 className="heading-medium">Option Select</h3>
 
           <OptionSelect title="Organisations">

@@ -1,6 +1,8 @@
 const path = require('path');
 const express = require('express');
-const assets = require('../').assets;
+const assets = require('../middleware').assets;
+
+const port = process.env.PORT || 8000;
 
 const app = express();
 
@@ -14,4 +16,6 @@ app.get('/', (req, res) => {
   res.render('index', { propositionHeader: 'React Examples' });
 });
 
-app.listen(8080);
+app.listen(port, function() {
+  console.log('Listening on port: ' + port);
+});

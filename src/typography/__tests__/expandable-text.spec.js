@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'enzyme'
-import ExpandableText from 'govuk-react-components/typography/expandable-text';
+import {ExpandableText} from 'govuk-react-components';
 
 describe('The Expandable Text Component', () => {
 
