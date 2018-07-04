@@ -43,14 +43,15 @@ Select.defaultProps = {
 };
 
 Select.propTypes = {
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   name: PropTypes.string.isRequired,
   options: Types.options.isRequired,
   onChange: PropTypes.func,
   id: PropTypes.string,
   type: PropTypes.string,
   value: Types.value,
-  hint: PropTypes.string,
-  error: PropTypes.string,
+  hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   nullOption: PropTypes.string
 };
 

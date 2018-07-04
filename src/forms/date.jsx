@@ -52,13 +52,13 @@ DateInput.defaultProps = {
 };
 
 DateInput.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   id: PropTypes.string,
   value: Types.date,
-  hint: PropTypes.string,
-  error: PropTypes.string
+  hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
 };
 
 export default DateInput;
