@@ -29,13 +29,13 @@ TextInput.defaultProps = {
 
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   onChange: PropTypes.func,
   id: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.string,
-  hint: PropTypes.string,
-  error: PropTypes.string
+  hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
 };
 
 export default TextInput;

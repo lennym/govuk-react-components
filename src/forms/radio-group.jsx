@@ -41,7 +41,7 @@ class RadioGroup extends MultipleChoice(Input) {
                 name={this.props.name}
                 value={opt.value}
                 {...this.optProps(opt)}
-                />
+              />
               <label htmlFor={this.optionId(opt)}>{opt.label}</label>
             </div>
           ))
@@ -55,14 +55,14 @@ class RadioGroup extends MultipleChoice(Input) {
 RadioGroup.propTypes = {
   name: PropTypes.string.isRequired,
   options: Types.options.isRequired,
-  label:PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   onChange: PropTypes.func,
   id: PropTypes.string,
   type: PropTypes.oneOf(['radio', 'checkbox']),
   inline: PropTypes.bool,
   value: PropTypes.oneOfType([Types.value, PropTypes.arrayOf(Types.value)]),
-  hint: PropTypes.string,
-  error: PropTypes.string
+  hint: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
 };
 
 export default RadioGroup;
