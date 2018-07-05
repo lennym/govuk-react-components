@@ -111,7 +111,6 @@ class Layout extends React.Component {
               <script src={file} key={file}></script>
             ))
           }
-          <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
         </body>
       </html>
     );
