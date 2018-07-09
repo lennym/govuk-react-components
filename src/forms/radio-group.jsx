@@ -28,7 +28,7 @@ class RadioGroup extends MultipleChoice(Input) {
   render() {
     const options = this.normaliseOptions();
     return <div className={this.errorClass('form-group')}>
-      <fieldset className={this.props.inline ? 'inline' : ''}>
+      <fieldset id={this.props.id || this.props.name} className={this.props.inline ? 'inline' : ''}>
         <legend className="form-label-bold">{this.props.label}</legend>
         { this.props.hint && <span className="form-hint">{this.props.hint}</span> }
         { this.props.error && <span className="error-message">{this.props.error}</span> }
