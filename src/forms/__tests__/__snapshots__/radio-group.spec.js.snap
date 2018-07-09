@@ -6,6 +6,7 @@ exports[`The Radio Group Component should render a hint when a hint is passed in
 >
   <fieldset
     class=""
+    id="test"
   >
     <legend
       class="form-label-bold"
@@ -27,6 +28,7 @@ exports[`The Radio Group Component should render an error when an error is passe
 >
   <fieldset
     class=""
+    id="test"
   >
     <legend
       class="form-label-bold"
@@ -48,6 +50,7 @@ exports[`The Radio Group Component should render correctly as a controlled input
 >
   <fieldset
     class=""
+    id="test"
   >
     <legend
       class="form-label-bold"
@@ -95,6 +98,7 @@ exports[`The Radio Group Component should render correctly with multiple options
 >
   <fieldset
     class=""
+    id="test"
   >
     <legend
       class="form-label-bold"
@@ -141,6 +145,7 @@ exports[`The Radio Group Component should render correctly with multiple options
 >
   <fieldset
     class=""
+    id="test"
   >
     <legend
       class="form-label-bold"
@@ -188,6 +193,7 @@ exports[`The Radio Group Component should render correctly with no options 1`] =
 >
   <fieldset
     class=""
+    id="test"
   >
     <legend
       class="form-label-bold"
