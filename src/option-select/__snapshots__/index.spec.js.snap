@@ -27,7 +27,6 @@ exports[`Option select container should render a description when supplied 1`] =
     class="options-container options-container--hod"
     id="title-options"
     role="group"
-    style="max-height:none;height:200px"
   >
     <div
       class="js-auto-height-inner"
@@ -63,7 +62,6 @@ exports[`Option select container should render all required values and be open b
     class="options-container options-container--hod"
     id="title-options"
     role="group"
-    style="max-height:none;height:200px"
   >
     <div
       class="js-auto-height-inner"
@@ -101,7 +99,6 @@ exports[`Option select container with Checked Options should render them as chec
     class="options-container options-container--hod"
     id="title-options"
     role="group"
-    style="max-height:none;height:200px"
   >
     <div
       class="js-auto-height-inner"
@@ -184,7 +181,6 @@ exports[`Option select container with Checked Options should render them as unch
     class="options-container options-container--hod"
     id="title-options"
     role="group"
-    style="max-height:none;height:200px"
   >
     <div
       class="js-auto-height-inner"
