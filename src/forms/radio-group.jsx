@@ -42,7 +42,10 @@ class RadioGroup extends MultipleChoice(Input) {
                 value={opt.value}
                 {...this.optProps(opt)}
               />
-              <label htmlFor={this.optionId(opt)}>{opt.label}</label>
+              <label htmlFor={this.optionId(opt)}>
+                {opt.label}
+                { opt.hint && <span className="form-hint">{opt.hint}</span> }
+              </label>
             </div>
           ))
         }
