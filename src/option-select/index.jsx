@@ -22,13 +22,7 @@ class OptionSelect extends Component {
     description: PropTypes.string,
     id: PropTypes.string,
     defaultOpen: PropTypes.bool,
-    children: PropTypes.node.isRequired,
-    style: PropTypes.objectOf(
-      {
-        maxHeight: PropTypes.string.isRequired,
-        height: PropTypes.string.isRequired
-      }
-    )
+    children: PropTypes.node.isRequired
   };
 
   constructor(props) {
@@ -48,11 +42,10 @@ class OptionSelect extends Component {
 
   render() {
     const { isOpen } = this.state;
-    const { title, description, style } = this.props;
+    const { title, description } = this.props;
     const id = this.props.id || title.replace(new RegExp(/\s/, 'g'), '-').toLowerCase();
     const controls = id + '-options';
     const labelledBy = id + '-label';
-    const styles = style ? style : { maxHeight: 'none', height: '200px' };
     return (
       <div className="app-c-option-select js-collapsible">
         <button className="js-container-head" type="button" aria-expanded={isOpen} aria-controls={controls}
@@ -64,8 +57,7 @@ class OptionSelect extends Component {
         </button>
         {isOpen && (
           <div role="group" aria-labelledby={labelledBy}
-               className="options-container options-container--hod" id={controls}
-               style={styles}>
+               className="options-container options-container--hod" id={controls}>
             <div className="js-auto-height-inner">
               {this.props.children}
             </div>
