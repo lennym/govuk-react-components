@@ -1,9 +1,9 @@
 {
-  "name": "govuk-react-components",
-  "version": "1.2.0",
-  "description": "React components for govuk layouts and elements",
-  "main": "dist/govuk-react-components.js",
-  "module": "dist/govuk-react-components.module.js",
+  "name": "@ukhomeoffice/react-components",
+  "version": "0.0.1",
+  "description": "React components for Home Office layouts and elements",
+  "main": "dist/ho-react-components.js",
+  "module": "dist/ho-react-components.module.js",
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run build",
@@ -22,18 +22,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lennym/govuk-react-components.git"
+    "url": "git+https://github.com/ukhomeoffice/react-components.git"
   },
   "author": "Leonard Martin <hello@lennym.co.uk>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lennym/govuk-react-components/issues"
+    "url": "https://github.com/ukhomeoffice/react-components/issues"
   },
-  "homepage": "https://github.com/lennym/govuk-react-components#readme",
-  "dependencies": {
-    "govuk_frontend_toolkit": "^7.5.0",
-    "govuk_template_mustache": "^0.23.0"
-  },
+  "homepage": "https://github.com/ukhomeoffice/react-components#readme",
+  "dependencies": {},
   "peerDependencies": {
     "prop-types": ">= 15.4.0",
     "react": ">= 16.0.0"

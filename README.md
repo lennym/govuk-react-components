@@ -1,4 +1,4 @@
-# govuk-react-components
+# @ukhomeoffice/react-components
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 A set of react components to build the basic elements descibed in [govuk-elements](https://github.com/alphagov/govuk_elements).
