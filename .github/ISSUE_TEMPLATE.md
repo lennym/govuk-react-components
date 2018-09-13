@@ -8,7 +8,7 @@ understand what's going on and fix the issue.
 
 -->
 
-* `govuk-react-components` version:
+* `@ukhomeoffice/react-components` version:
 * `node` version:
 * `npm` (or `yarn`) version:
 

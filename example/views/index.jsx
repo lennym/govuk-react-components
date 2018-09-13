@@ -14,7 +14,7 @@ import {
   CheckedOption,
   TabBar,
   TabItem
-} from '../../dist/govuk-react-components'
+} from '../../dist/ho-react-components'
 import Layout from './layout';
 
 class Index extends React.Component {

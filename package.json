@@ -12,10 +12,9 @@
     "test:unit-source": "jest --config ./scripts/jest/config.source.js --env=jsdom",
     "test:watch": "npm run test:unit-source -- --watch",
     "test:update": "npm run test:unit-source -- --updateSnapshot",
-    "build": "npm run build:js && npm run build:css",
+    "build": "npm run build:js",
     "build:js": "rollup -c rollup.config.js",
     "prebuild:css": "mkdir -p ./assets",
-    "build:css": "npm-sass ./src/styles/elements.scss > ./assets/elements.css",
     "prepublish": "npm run build",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"

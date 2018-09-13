@@ -1,5 +1,5 @@
 import React from 'react';
-import {Layout, PhaseBanner} from '../../dist/govuk-react-components';
+import {Layout, PhaseBanner} from '../../dist/ho-react-components';
 
 
 class Page extends React.Component {
@@ -7,7 +7,7 @@ class Page extends React.Component {
     return (
       <Layout propositionHeader={this.props.propositionHeader} title={this.props.title}>
         <main className="main" id="content">
-          <PhaseBanner feedbackUrl="https://github.com/lennym/govuk-react-components" />
+          <PhaseBanner feedbackUrl="https://github.com/ukhomeoffice/react-components" />
           <div className="grid-row">
 
             <div className="column-full">
