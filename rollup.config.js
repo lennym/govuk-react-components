@@ -13,16 +13,16 @@ var external = externalDeps.concat(nodeDeps);
 
 export default {
   input: './src/index.js',
-  moduleName: 'govuk-react-components',
+  moduleName: 'ho-react-components',
   sourcemap: true,
 
   targets: [
     {
-      dest: 'dist/govuk-react-components.js',
+      dest: 'dist/ho-react-components.js',
       format: 'umd'
     },
     {
-      dest: 'dist/govuk-react-components.module.js',
+      dest: 'dist/ho-react-components.module.js',
       format: 'es'
     }
   ],

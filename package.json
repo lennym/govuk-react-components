@@ -1,9 +1,9 @@
 {
-  "name": "govuk-react-components",
-  "version": "1.2.0",
-  "description": "React components for govuk layouts and elements",
-  "main": "dist/govuk-react-components.js",
-  "module": "dist/govuk-react-components.module.js",
+  "name": "@ukhomeoffice/react-components",
+  "version": "0.0.1",
+  "description": "React components for Home Office layouts and elements",
+  "main": "dist/ho-react-components.js",
+  "module": "dist/ho-react-components.module.js",
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run build",
@@ -12,28 +12,24 @@
     "test:unit-source": "jest --config ./scripts/jest/config.source.js --env=jsdom",
     "test:watch": "npm run test:unit-source -- --watch",
     "test:update": "npm run test:unit-source -- --updateSnapshot",
-    "build": "npm run build:js && npm run build:css",
+    "build": "npm run build:js",
     "build:js": "rollup -c rollup.config.js",
     "prebuild:css": "mkdir -p ./assets",
-    "build:css": "npm-sass ./src/styles/elements.scss > ./assets/elements.css",
     "prepublish": "npm run build",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lennym/govuk-react-components.git"
+    "url": "git+https://github.com/ukhomeoffice/react-components.git"
   },
   "author": "Leonard Martin <hello@lennym.co.uk>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lennym/govuk-react-components/issues"
+    "url": "https://github.com/ukhomeoffice/react-components/issues"
   },
-  "homepage": "https://github.com/lennym/govuk-react-components#readme",
-  "dependencies": {
-    "govuk_frontend_toolkit": "^7.5.0",
-    "govuk_template_mustache": "^0.23.0"
-  },
+  "homepage": "https://github.com/ukhomeoffice/react-components#readme",
+  "dependencies": {},
   "peerDependencies": {
     "prop-types": ">= 15.4.0",
     "react": ">= 16.0.0"

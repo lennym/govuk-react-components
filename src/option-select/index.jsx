@@ -63,8 +63,10 @@ class OptionSelect extends Component {
           <div className="js-selected-counter">{description}</div>
         </button>
         {isOpen && (
-          <div role="group" aria-labelledby={labelledBy}
-               className="options-container options-container--hod" id={controls}
+          <div role="group"
+               aria-labelledby={labelledBy}
+               className="options-container options-container--hod"
+               id={controls}
                style={styles}>
             <div className="js-auto-height-inner">
               {this.props.children}
@@ -78,11 +80,9 @@ class OptionSelect extends Component {
 }
 
 export const CheckedOption = ({ children, name, value, id, ...other }) => (
-  <div className="multiple-choice">
-    <input name={name} value={value} id={id} type="checkbox" {...other} />
-    <label htmlFor={id}>
-      {children}
-    </label>
+  <div className="govuk-checkboxes__item">
+    <input name={name} value={value} id={id} type="checkbox" {...other} className="govuk-checkboxes__input" />
+    <label htmlFor={id} className="govuk-label govuk-checkboxes__label">{children}</label>
   </div>
 );
 

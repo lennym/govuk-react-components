@@ -2,7 +2,7 @@
 const babelJest = require('babel-jest');
 
 const moduleNameMapper = {
-  'govuk-react-components(.*)': '<rootDir>/src$1'
+  'ho-react-components(.*)': '<rootDir>/src$1'
 };
 
 module.exports = {

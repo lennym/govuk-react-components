@@ -12,7 +12,7 @@ Thanks for being willing to contribute!
 > pull requests from branches on your fork. To do this, run:
 >
 > ```
-> git remote add upstream https://github.com/lennym/govuk-react-components
+> git remote add upstream https://github.com/ukhomeoffice/react-components
 > git fetch upstream
 > git branch --set-upstream-to=upstream/master master
 > ```
@@ -51,4 +51,4 @@ Also, please watch the repo and respond to questions/bug reports/feature
 requests! Thanks!
 
 [all-contributors]: https://github.com/kentcdodds/all-contributors
-[issues]: https://github.com/lennym/govuk-react-components/issues
+[issues]: https://github.com/ukhomeoffice/react-components/issues
