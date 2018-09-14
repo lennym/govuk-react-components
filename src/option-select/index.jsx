@@ -65,7 +65,7 @@ class OptionSelect extends Component {
         {isOpen && (
           <div role="group"
                aria-labelledby={labelledBy}
-               className="options-container options-container--hod multiple-choice--hod"
+               className="options-container options-container--hod"
                id={controls}
                style={styles}>
             <div className="js-auto-height-inner">
@@ -80,7 +80,7 @@ class OptionSelect extends Component {
 }
 
 export const CheckedOption = ({ children, name, value, id, ...other }) => (
-  <div className="multiple-choice govuk-checkboxes__item">
+  <div className="govuk-checkboxes__item">
     <input name={name} value={value} id={id} type="checkbox" {...other} className="govuk-checkboxes__input" />
     <label htmlFor={id} className="govuk-label govuk-checkboxes__label">{children}</label>
   </div>
