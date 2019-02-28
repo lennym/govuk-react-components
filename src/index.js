@@ -17,5 +17,6 @@ export { default as OptionSelect, CheckedOption } from './option-select';
 export { default as ExpandableText } from './typography/expandable-text';
 export { default as Badge } from './badge';
 export { default as PhaseBanner} from './phase-banner';
+export { default as Warning } from './warning';
 
 export { default as Layout } from './layout';
